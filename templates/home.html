@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">	
+		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="icon" href="{{ url_for('static', filename='logo_white_notext.svg') }}" type="image/svg">  
+		<title>DSU MUNSOC</title>
+		<!--Bootstrap-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<!--Icon Library-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+
+		<div id="loading-screen">
+        	<img src="{{ url_for('static', filename='logo_white.png') }}" alt="MUNSOC Logo" id="loading-logo" width="200" height="200">
+    	</div>
+
+    	<div id="main-content" class="fade-in">
+			<nav class="navbar navbar-expand-lg navbar-light disabled" style="background-color: #00204A;">
+
+			<a class="navbar-brand disabled" href="#" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
+
+	        <a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">MUNSOC</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			 <div class="collapse navbar-collapse" id="navbarText">
+			    <ul class="navbar-nav mr-auto">
+			    	<li class="nav-item active">
+			        	<a class="nav-link" href="#" id="navbar_current_page">Home <span class="sr-only"></span></a>
+			     	</li>
+			      	<li class="nav-item active">
+			        	<a class="nav-link" href="#" id="navbar">Events <span class="sr-only"></span></a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#" id="navbar">The Secretariat</a>
+				    </li>
+			    </ul>
+			    <span class="navbar-text ms-auto" style="margin-right: 50px; font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
+			      The Model United Nations Society
+			    </span>
+			</div>
+			</nav>
+			
+
+			<main>
+
+				<div>
+				<hr id="separator" style="width: 100%;">
+				</div>
+
+				<br>
+
+				<div class="container-md" style="text-align: center;">
+					<div class="display-5">The Model United Nations Society</div>
+					<div class="display-7"> At Dayananda Sagar University</div>
+				</div>
+
+				<br>
+
+				<div class="container-md">
+					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
+				</div>
+
+				<br>
+
+				<div class="container-md">
+					<div class="display-7">About Us</div>
+					<br>
+					<div class="display-8">
+						<p>Established in 2023, the Model United Nations Society at
+						Dayananda Sagar University is committed to raising awareness about
+						global events and influential personalities. Our mission centers on
+						cultivating indispensable skills—diplomacy, leadership, research, and
+						eloquence—crucial in navigating today's complex world.
+						<br><br>
+						In an era fraught with challenges, it is imperative to develop a
+						perspective that accommodates all parties. Attacks on free speech,
+						relics of a bygone era, must be consigned to history. As torchbearers
+						of the next generation, we bear the responsibility of safeguarding
+						principles bestowed upon us by democratic institutions, a free press,
+						and international cooperation.
+				</div>
+
+				<br>
+
+				<div class="container-md">
+					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
+				</div>
+
+				<br>
+
+				<div class="container-md">
+					<div class="display-7">About Dayananda Sagar University</div>
+					<br>
+					<div class="display-8">
+						<p>In the six decades since the establishment of Dayananda Sagar Institutions in 1960, the group has grown into one of India’s leading educational institutions today. This growth is the result of the institutions focused effort to advance knowledge and educate students in all disciplines, from medicine to engineering, and law to commerce. The pursuit of excellence, fairness, leadership, and integrity & transparency are values that drive our institutions.
+						</p>
+					</div>
+				</div>
+
+				<br><br><br>
+
+			</main>
+
+			<footer>
+			    <div class="display-8">© 2024 Copyright: DSU Model United Nations</div>
+			    <div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>			    
+				<a href="#" class="fa fa-linkedin" href="https://in.linkedin.com/company/dsu-model-united-nations-society"></a>
+				<a href="#" class="fa fa-instagram" href="https://www.instagram.com/dsu_munsoc/?igsh=MWwydW53a28yeTIyYw%3D%3D"></a>
+			</footer>
+
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<!--Transition Script-->
+		<script>
+		    document.addEventListener("DOMContentLoaded", function () {
+		        // Simulate loading time
+		        setTimeout(function () {
+		            // Hide loading screen with fade-out animation
+		            var loadingScreen = document.getElementById("loading-screen");
+		            loadingScreen.style.transition = "opacity 1s ease-in-out";
+		            loadingScreen.style.opacity = "0";
+
+		            // Show main content after the fade-out animation
+		            setTimeout(function () {
+		                loadingScreen.style.display = "none";
+		                document.getElementById("main-content").classList.add("fade-in");
+		            }, 500);
+		        }, 1000);
+		    });
+		</script>
+	</body>
+</html>

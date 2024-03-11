@@ -9,3 +9,7 @@ def home():
 @app.route('/events')
 def events():
 	return render_template('events.html')
+
+@app.route('/the-secretariat')
+def secretariat():
+	return render_template('secretariat.html')

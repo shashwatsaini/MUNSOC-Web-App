@@ -69,11 +69,6 @@
     border-radius: 10px;
 }
 
-a.disabled {
-  pointer-events: none;
-  cursor: default;
-}
-
 main {
 	font-family: 'museo-sans';
 }
@@ -91,6 +86,13 @@ div {
 
 .display-7 {
 	font-size: 30px;
+}
+
+.carousel-inner img {
+    height: 512px; /* Set a fixed height for your images */
+    object-fit: contain; /* Use 'cover' to maintain aspect ratio and cover the entire container */
+    background-color: #ffffff; /* Set the background color for the white bars */
+    margin: 0 auto; /* Center the image within the container */
 }
 
 footer {
@@ -123,4 +125,8 @@ footer {
 
 .fa-linkedin {
   color: white;
+}
+
+#caption {
+    color: white;
 }

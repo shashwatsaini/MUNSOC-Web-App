@@ -22,7 +22,7 @@
 
 			<a class="navbar-brand disabled" href="#" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
 
-	        <a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">MUNSOC</a>
+	        <a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;" disabled="">MUNSOC</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
 			        	<a class="nav-link" href="#" id="navbar_current_page">Home <span class="sr-only"></span></a>
 			     	</li>
 			      	<li class="nav-item active">
-			        	<a class="nav-link" href="#" id="navbar">Events <span class="sr-only"></span></a>
+			        	<a class="nav-link" href="/events" id="navbar">Events <span class="sr-only"></span></a>
 				    </li>
 				    <li class="nav-item">
 				        <a class="nav-link" href="#" id="navbar">The Secretariat</a>
@@ -76,7 +76,7 @@
 								<img
 								 src="{{ url_for('static', filename='img/carousel1.jpg') }}" class="d-block w-100" alt="...">
 								 <div class="carousel-caption d-none d-md-block">
-        							<h5>The Society at Our Inaugural Event</h5>
+        							<h5 id="caption">The Society at Our Inaugural Event</h5>
         						</div>
 								</div>
 								<div class="carousel-item">
@@ -152,10 +152,12 @@
 			</main>
 
 			<footer>
-			    <div class="display-8">© 2024 Copyright: DSU Model United Nations</div>
+			    <div class="display-8">© 2024 Copyright: DSU Model United Nations Society</div>
 			    <div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>			    
 				<a href="#" class="fa fa-linkedin" href="https://in.linkedin.com/company/dsu-model-united-nations-society"></a>
 				<a href="#" class="fa fa-instagram" href="https://www.instagram.com/dsu_munsoc/?igsh=MWwydW53a28yeTIyYw%3D%3D"></a>
+				<br><br>
+				<img src="{{ url_for('static', filename='logo_white.png') }}" width="5%" height="5%">
 			</footer>
 
 		</div>

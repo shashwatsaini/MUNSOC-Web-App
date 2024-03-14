@@ -13,3 +13,8 @@ def events():
 @app.route('/the-secretariat')
 def secretariat():
 	return render_template('secretariat.html')
+
+@app.route('/register')
+def register():
+	return render_template('register.html')
+

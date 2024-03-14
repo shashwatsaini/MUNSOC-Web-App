@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">	
+		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="icon" href="{{ url_for('static', filename='logo_white_notext.svg') }}" type="image/svg">  
+		<title>DSU MUNSOC</title>
+		<!--Bootstrap-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<!--Icon Library-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-light disabled" style="background-color: #00204A;">
+
+			<a class="navbar-brand disabled" href="#" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
+
+	        <a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;" disabled="">DSU MUNSOC</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			 <div class="collapse navbar-collapse" id="navbarText">
+			    <ul class="navbar-nav mr-auto">
+			    	<li class="nav-item active">
+			        	<a class="nav-link" href="/" id="navbar">Home <span class="sr-only"></span></a>
+			     	</li>
+			      	<li class="nav-item active">
+			        	<a class="nav-link" href="/events" id="navbar">Events <span class="sr-only"></span></a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="/the-secretariat" id="navbar">The Secretariat</a><span class="sr-only"></span></a>
+				    </li>
+					<li class="nav-item">
+				        <a class="nav-link" href="/register" id="navbar_current_page">Register for COPE Edition I</a><span class="sr-only"></span></a>
+				    </li>
+			    </ul>
+			    <span class="navbar-text ms-auto" style="margin-right: 50px; font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
+			      The Model United Nations Society
+			    </span>
+			</div>
+		</nav>
+			
+		<main>
+
+			<div>
+				<hr id="separator" style="width: 100%;">
+			</div>
+
+			<br>
+
+			<div class="container-md">
+				<div class="display-5">Register</div>
+				<div class="display-7">For COPE Edition I</div>
+			</div>
+
+			<br>
+
+			<div class="container-md">
+					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
+			</div>
+
+			<br>
+
+			<div class="container-md" style="width: 50%;">
+				<form name="team" onsubmit="return validateForm()">
+					<div class="form-group row">
+						<label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+							<div class="col-sm-10">
+							<input type="email" name="inputEmail" class="form-control" id="inputEmail" placeholder="Email">
+						</div>
+					</div>
+					<br>
+					<div class="form-group row">
+						<label for="inputTeamName" class="col-sm-2 col-form-label">Team Name</label>
+							<div class="col-sm-10">
+							<input type="text" name="inputTeamName" class="form-control" id="inputTeamName" placeholder="Team Name">
+						</div>
+					</div>
+					<br>
+					<fieldset class="form-group">
+					<div class="row">
+						<legend class="col-form-label col-sm-2 pt-0">Committee Preference</legend>
+						<div class="col-sm-10">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios1" value="option1">
+								<label class="form-check-label" for="gridRadios1">
+								The Vidhan Soudha
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios2" value="option2">
+								<label class="form-check-label" for="gridRadios2">
+								The Lok Sabha
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios3" value="option3">
+								<label class="form-check-label" for="gridRadios3">
+								The UN General Assembly
+								</label>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<br>
+					<fieldset class="form-group">
+					<div class="row">
+						<legend class="col-form-label col-sm-2 pt-0">Team Size</legend>
+						<div class="col-sm-10">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="inputTeamSize" id="gridRadios4" value="3">
+								<label class="form-check-label" for="gridRadios4">
+								3
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="inputTeamSize" id="gridRadios5" value="4">
+								<label class="form-check-label" for="gridRadios5">
+								4
+								</label>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<div id="inputFieldsContainer"></div>
+					<br><br>
+					<div class="form-group row justify-content-center">
+						<div class="col-sm-10">
+						<button type="submit" class="btn btn-primary" style="background-color: #00204A; border-color: #FFD700; padding-left: 20px; padding-right: 20px;">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</main>
+		<script>
+			function validateForm() {
+				var x = document.forms["team"]["inputEmail"].value;
+				if (x == "" || x == null) {
+					alert("Email must be filled.");
+				return false;
+				}
+
+				x = document.forms["team"]["inputTeamName"].value;
+				if (x == "" || x == null) {
+					alert("Team Name must be filled.");
+					return false;
+				}
+
+				var radios = document.getElementsByName("inputCommitteePreference");
+				var radioValid = false;
+				var i = 0;
+				while (!radioValid && i < radios.length) {
+					if (radios[i].checked)
+						radioValid = true;
+					i ++;
+				}
+				if (!radioValid) {
+					alert("Committee Preference must be selected.")
+					return false;
+				}
+
+				var teamSizes = document.getElementsByName("inputTeamSize");
+				var teamSizesValid = false;
+				i = 0;
+				while (!teamSizesValid && i < teamSizes.length) {
+					if (teamSizes[i].checked)
+						teamSizesValid = true;
+					i ++;
+				}
+				if (!teamSizesValid) {
+					alert("Team Size must be selected.")
+					return false;
+				}
+
+				var memberNames = document.getElementsByName("inputMemberName");
+				var memberValid = true;
+				var i = 0;
+				while (!memberValid && i < memberNames.length) {
+					if (memberNames[i] == "" || memberNames[i] == null) {
+						radioValid = false;
+						break;
+					}
+					i ++;
+				}
+				if (!memberValid) {
+					alert("Team Member Names must be filled.")
+					return false;
+				}
+			}
+
+		    window.onload = function() {
+		        var radioButtons = document.querySelectorAll('input[name="inputTeamSize"]');
+
+		        radioButtons.forEach(function(radioButton) {
+		            radioButton.addEventListener('change', function() {
+		                var selectedValue = parseInt(this.value);
+
+		                var inputFieldsContainer = document.getElementById('inputFieldsContainer');
+
+		                inputFieldsContainer.innerHTML = '';
+		                var br = document.createElement('br');
+		                inputFieldsContainer.appendChild(br)
+
+		                for (var i = 0; i < selectedValue; i++) {
+		                    var label = document.createElement('label');
+		                    label.setAttribute('for', 'member' + (i + 1));
+		                    label.innerHTML = 'Member ' + (i + 1) + ' Name:';
+		                    inputFieldsContainer.appendChild(label);
+
+		                    var input = document.createElement('input');
+		                    input.type = 'text';
+		                    input.placeholder = 'Member ' + (i + 1) + ' Name';
+		                    input.name = 'inputMemberName';
+		                    input.required = true;
+		                    input.classList.add('form-control');
+		                    inputFieldsContainer.appendChild(input);
+
+		                    if (i < selectedValue - 1) {
+		                        inputFieldsContainer.appendChild(document.createElement('br'));
+		                    }
+		                }
+		            });
+		        });
+		    };
+		</script>
+	</body>
+</html>
+		

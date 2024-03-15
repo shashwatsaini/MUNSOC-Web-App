@@ -45,10 +45,15 @@
 		</nav>
 			
 		<main>
-
+			{% if registered == True %}
+			<div class="alert alert-info" role="alert" style="background-color: #FFD700; color: white;">
+		  		You have registered successfully.
+			</div>
+			{% else %}
 			<div>
 				<hr id="separator" style="width: 100%;">
 			</div>
+			{% endif %}
 
 			<br>
 
@@ -66,7 +71,7 @@
 			<br>
 
 			<div class="container-md" style="width: 50%;">
-				<form name="team" onsubmit="return validateForm()">
+				<form name="team" onsubmit="return validateForm()" method="post">
 					<div class="form-group row">
 						<label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
 							<div class="col-sm-10">
@@ -86,19 +91,19 @@
 						<legend class="col-form-label col-sm-2 pt-0">Committee Preference</legend>
 						<div class="col-sm-10">
 							<div class="form-check">
-								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios1" value="option1">
+								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios1" value="1">
 								<label class="form-check-label" for="gridRadios1">
 								The Vidhan Soudha
 								</label>
 							</div>
 							<div class="form-check">
-								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios2" value="option2">
+								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios2" value="2">
 								<label class="form-check-label" for="gridRadios2">
 								The Lok Sabha
 								</label>
 							</div>
 							<div class="form-check">
-								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios3" value="option3">
+								<input class="form-check-input" type="radio" name="inputCommitteePreference" id="gridRadios3" value="3">
 								<label class="form-check-label" for="gridRadios3">
 								The UN General Assembly
 								</label>
@@ -177,19 +182,27 @@
 					return false;
 				}
 
-				var memberNames = document.getElementsByName("inputMemberName");
-				var memberValid = true;
-				var i = 0;
-				while (!memberValid && i < memberNames.length) {
-					if (memberNames[i] == "" || memberNames[i] == null) {
-						radioValid = false;
-						break;
-					}
-					i ++;
-				}
-				if (!memberValid) {
-					alert("Team Member Names must be filled.")
+				var memberName1 = document.getElementsByName("inputMemberName1");
+				if (memberName1 == "" || memberName1 == null) {
+					alert("Team Member Names must be filled.");
 					return false;
+				}
+				var memberName2 = document.getElementsByName("inputMemberName2");
+				if (memberName2 == "" || memberName2 == null) {
+					alert("Team Member Names must be filled.");
+					return false;
+				}
+				var memberName3 = document.getElementsByName("inputMemberName3");
+				if (memberName3 == "" || memberName3 == null) {
+					alert("Team Member Names must be filled.");
+					return false;
+				}
+				var memberName4 = document.getElementsByName("inputMemberName4");
+				if (memberName4) {
+					if (memberName4 == "" || memberName4 == null) {
+						alert("Team Member Names must be filled.");
+						return false;
+					}
 				}
 			}
 
@@ -215,7 +228,7 @@
 		                    var input = document.createElement('input');
 		                    input.type = 'text';
 		                    input.placeholder = 'Member ' + (i + 1) + ' Name';
-		                    input.name = 'inputMemberName';
+		                    input.name = 'inputMemberName' + (i + 1);
 		                    input.required = true;
 		                    input.classList.add('form-control');
 		                    inputFieldsContainer.appendChild(input);

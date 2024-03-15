@@ -12,7 +12,24 @@ def create_app():
 	return app
 
 app = create_app()
-from application.controllers import *
+
+@app.route('/')
+def home():
+	return render_template('home.html')
+
+@app.route('/events')
+def events():
+	return render_template('events.html')
+
+@app.route('/the-secretariat')
+def secretariat():
+	return render_template('secretariat.html')
+
+@app.route('/register')
+def register():
+	return render_template('register.html')
+
+# from application.controllers import *
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=5000)
+	app.run()

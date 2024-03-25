@@ -3,7 +3,7 @@ Made using Flask, SQLite.
 
 ## Installation
 Install all python packages in requirements.txt.
-Run flask_app.py for debugging, deploy on Vercel with vercel.json.
+Run flask_app.py for debugging.
 
 ## Copyright
 

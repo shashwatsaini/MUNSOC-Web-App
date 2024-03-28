@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">	
+		<meta charset="utf-8">
 		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-		<link rel="icon" href="{{ url_for('static', filename='logo_white_notext.svg') }}" type="image/svg">  
+		<link rel="icon" href="{{ url_for('static', filename='logo_white_notext.svg') }}" type="image/svg">
 		<title>Events: DSU MUNSOC</title>
-		<!--Bootstrap-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<!--Icon Library-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
 	<body>
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00204A;">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
 
-		<nav class="navbar navbar-expand-lg navbar-light disabled" style="background-color: #00204A;">
+				<a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">DSU MUNSOC</a>
 
-		<a class="navbar-brand disabled" href="#" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
-
-        <a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">DSU MUNSOC</a>
-
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		 <div class="collapse navbar-collapse" id="navbarText">
-		    <ul class="navbar-nav mr-auto">
-		    	<li class="nav-item active">
-		        	<a class="nav-link" href="/" id="navbar">Home <span class="sr-only"></span></a>
-		     	</li>
-		      	<li class="nav-item active">
-		        	<a class="nav-link" href="#" id="navbar_current_page">Events <span class="sr-only"></span></a>
-			    </li>
-			    <li class="nav-item">
-			        <a class="nav-link" href="/the-secretariat" id="navbar">The Secretariat</a><span class="sr-only"></span></a>
-			    </li>
-				<li class="nav-item">
-					<a class="nav-link" href="/register" id="navbar">Register for COPE Edition I</a><span class="sr-only"></span></a>
-				</li>
-		    </ul>
-		    <span class="navbar-text ms-auto" style="margin-right: 50px; font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
-		      The Model United Nations Society
-		    </span>
-		</div>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="/" id="navbar_text">Home </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/events" id="navbar_text">Events </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/the-secretariat" id="navbar_text">The Secretariat</a></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/register" id="navbar_text">Register for COPE Edition I</a>
+						</li>
+					</ul>
+					<span class="navbar-text ms-auto" style="margin-right: 50px; font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
+					The Model United Nations Society
+					</span>
+				</div>
+			</div>
 		</nav>
 
-		<main>
+		<main class="container-fluid">
 
 			<div>
 			<hr id="separator" style="width: 100%;">
@@ -66,6 +63,9 @@
 
 			<div class="container-md d-flex justify-content-center">
 			    <div class="col-7 mx-auto">
+					<div class="card-title">
+						MUNSOC Delegation at Unicon'24, at PES University Electronic City Campus
+					</div>
 			        <div class="card">
 			            <div class="card-body">
 			                <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
@@ -86,7 +86,6 @@
 			                        <span class="sr-only">Next</span>
 			                    </a>
 			                </div>
-			                <p style="padding-top: 10px;" class="card-text text-center">MUNSOC Delegation at Unicon'24, at PES University Electronic City Campus</p>
 			            </div>
 			        </div>
 			    </div>
@@ -102,6 +101,9 @@
 
 			<div class="container-md d-flex justify-content-center">
 			    <div class="col-7 mx-auto">
+					<div class="card-title">
+						MUNSOC Delegation at BITSMUN'24, at BITS Pilani Goa Campus
+					</div>
 			        <div class="card">
 			            <div class="card-body">
 			                <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
@@ -122,7 +124,6 @@
 			                        <span class="sr-only">Next</span>
 			                    </a>
 			                </div>
-			                <p style="padding-top: 10px;" class="card-text text-center">MUNSOC Delegation at BITSMUN'24, at BITS Pilani Goa Campus</p>
 			            </div>
 			        </div>
 			    </div>
@@ -138,6 +139,9 @@
 
 			<div class="container-md d-flex justify-content-center">
 			    <div class="col-7 mx-auto">
+					<div class="card-title">
+						Our inaugural event and seminar on 'Dive Into Diplomacy' at Dayananda Sagar University
+					</div>
 			        <div class="card">
 			            <div class="card-body">
 			                <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
@@ -161,7 +165,6 @@
 			                        <span class="sr-only">Next</span>
 			                    </a>
 			                </div>
-			                <p style="padding-top: 10px;" class="card-text text-center">Our inaugural event and seminar on 'Dive Into Diplomacy' at Dayananda Sagar University</p>
 			            </div>
 			        </div>
 			    </div>
@@ -174,7 +177,7 @@
 
 		<footer>
 		    <div class="display-8">© 2024 Copyright: DSU Model United Nations Society</div>
-		    <div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>			    
+		    <div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>
 			<a class="fa fa-linkedin fa-lg" style="padding-right: 10px;" href="https://in.linkedin.com/company/dsu-model-united-nations-society"></a>
 			<a class="fa fa-instagram fa-lg" href="https://www.instagram.com/dsu_munsoc/?igsh=MWwydW53a28yeTIyYw%3D%3D"></a>
 			<br>
@@ -182,5 +185,7 @@
 		</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 	</body>
 </html>

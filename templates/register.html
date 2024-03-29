@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">	
+		<meta charset="utf-8">
 		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-		<link rel="icon" href="{{ url_for('static', filename='logo_white_notext.svg') }}" type="image/svg">  
+		<link rel="icon" href="{{ url_for('static', filename='logo_white_notext.svg') }}" type="image/svg">
 		<title>DSU MUNSOC</title>
 		<!--Bootstrap-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -13,37 +13,36 @@
 
 	<body>
 
-		<nav class="navbar navbar-expand-lg navbar-light disabled" style="background-color: #00204A;">
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00204A;">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
 
-			<a class="navbar-brand disabled" href="#" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
+				<a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">DSU MUNSOC</a>
 
-	        <a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;" disabled="">DSU MUNSOC</a>
-
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			 <div class="collapse navbar-collapse" id="navbarText">
-			    <ul class="navbar-nav mr-auto">
-			    	<li class="nav-item active">
-			        	<a class="nav-link" href="/" id="navbar">Home <span class="sr-only"></span></a>
-			     	</li>
-			      	<li class="nav-item active">
-			        	<a class="nav-link" href="/events" id="navbar">Events <span class="sr-only"></span></a>
-				    </li>
-				    <li class="nav-item">
-				        <a class="nav-link" href="/the-secretariat" id="navbar">The Secretariat</a><span class="sr-only"></span></a>
-				    </li>
-					<li class="nav-item">
-				        <a class="nav-link" href="/register" id="navbar_current_page">Register for COPE Edition I</a><span class="sr-only"></span></a>
-				    </li>
-			    </ul>
-			    <span class="navbar-text ms-auto" style="margin-right: 50px; font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
-			      The Model United Nations Society
-			    </span>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="/" id="navbar_text">Home </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/events" id="navbar_text">Events </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/the-secretariat" id="navbar_text">The Secretariat</a></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/register" id="navbar_text">Register for COPE Edition I</a>
+						</li>
+					</ul>
+					<span class="navbar-text ms-auto" style="margin-right: 50px; font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
+					The Model United Nations Society
+					</span>
+				</div>
 			</div>
 		</nav>
-			
 		<main>
 			{% if registered == True %}
 			<div class="alert alert-info" role="alert" style="background-color: #FFD700; color: white;">
@@ -252,4 +251,3 @@
 		</script>
 	</body>
 </html>
-		

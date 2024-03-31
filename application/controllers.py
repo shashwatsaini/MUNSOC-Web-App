@@ -13,7 +13,6 @@ drive_service = None
 
 @app.route('/')
 def home():
-	synchronize_drive('teams.csv')
 	return render_template('home.html')
 
 @app.route('/events')

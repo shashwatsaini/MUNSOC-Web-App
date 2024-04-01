@@ -169,9 +169,9 @@ def synchronize_drive(file_path, folder_name='MUNSOC Web App'):
 		app.logger.info(f'[{datetime.now()}] GDrive: Sync is disabled')	
 
 # Initialize mailing service setup
-def init_email(FLAG_gmail):
+def init_email(FLAG_mail):
 	global mail_service
-	mail_service = FLAG_gmail
+	mail_service = FLAG_mail
 
 # Function to send an email to registered id, after registration
 def send_email(participant_mail_id, participant_name):
@@ -197,7 +197,7 @@ def send_email(participant_mail_id, participant_name):
 
 		subject = 'COPE Edition I: Registration Successful'
 		message = f'Greetings {participant_name}!\n\nWe wish to inform you that your registration for COPE Edition I was successful. We look forward to your participation.\n\nYours sincerely,\nShashwat Saini\nPresident\nThe Model United Nations Society'
-		email_headers = f'From: {email}\r\nTo: shashwatsaini290@gmail.com\r\nSubject: {subject}\r\n\r\n'
+		email_headers = f'From: {email}\r\nTo: {participant_mail_id}\r\nSubject: {subject}\r\n\r\n'
 		message = email_headers + message
 		smtp.sendmail(email, participant_mail_id, message)
 		smtp.quit()

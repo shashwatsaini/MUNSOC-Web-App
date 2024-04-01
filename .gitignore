@@ -1,5 +1,6 @@
 venv/
 lib/
 gcp_key.json
+gmail_key.txt
 application/__pycache__
 webapp.log

@@ -1,5 +1,7 @@
 import os
 import logging
+import smtplib
+import regex as re
 from datetime import datetime
 from flask import current_app as app
 from flask import Flask, request
@@ -13,6 +15,7 @@ from googleapiclient.http import MediaFileUpload
 
 drive_service = None
 gdrive_sync = False
+mail_service = False
 
 @app.route('/')
 def home():
@@ -70,7 +73,7 @@ def register():
 
 			synchronize_drive('teams.csv')
 
-			app.logger.info(f'[{datetime.now()}] POST: Synchronized to GDrive')
+			send_email(email, name)
 
 			return render_template('register.html', registered=True)
 
@@ -153,14 +156,55 @@ def synchronize_drive(file_path, folder_name='MUNSOC Web App'):
 	        media = MediaFileUpload(file_path, mimetype='application/octet-stream', resumable=True)      
 	        file = drive_service.files().update(fileId=file_id, media_body=media).execute()
 	        app.logger.info(f'[{datetime.now()}] GDrive: File {os.path.basename(file_path)} updated in folder {folder_name}')
+	        app.logger.info(f'[{datetime.now()}] POST: Synchronized to GDrive')
 	    else:
 	        # Create the file if it doesn't exist
 	        file_metadata = {'name': os.path.basename(file_path), 'parents': [folder_id]}
 	        media = MediaFileUpload(file_path, mimetype='application/octet-stream', resumable=True)      
 	        file = drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
-	        app.logger.info(f'[{datetime.now()}] GDrive File {os.path.basename(file_path)} created in folder {folder_name}')
+	        app.logger.info(f'[{datetime.now()}] GDrive: File {os.path.basename(file_path)} created in folder {folder_name}')
+	        app.logger.info(f'[{datetime.now()}] POST: Synchronized to GDrive')
 
 	else:
 		app.logger.info(f'[{datetime.now()}] GDrive: Sync is disabled')	
+
+# Initialize mailing service setup
+def init_email(FLAG_gmail):
+	global mail_service
+	mail_service = FLAG_gmail
+
+# Function to send an email to registered id, after registration
+def send_email(participant_mail_id, participant_name):
+	if mail_service:
+		smtp = smtplib.SMTP('smtp.gmail.com', 587)
+		smtp.starttls()
+
+		app.logger.info(f'[{datetime.now()}] Mail: Attempting to send an email to registered mail id.')
+
+		# Reading the key
+		with open('gmail_key.txt', 'r') as key:
+			lines = key.readlines()
+			email = re.search(r'=\s*(.*)', lines[0])
+			password = re.search(r'=\s*(.*)', lines[1])
+			if email and password:
+			    email = email.group(1).strip()
+			    password = password.group(1).strip()
+			    smtp.login(email, password)
+			    app.logger.info(f'[{datetime.now()}] Mail: Login successful')
+			else:
+			    app.logger.exception(f'[{datetime.now()}] Mail: Could not retrieve email and password.')
+			    return None
+
+		subject = 'COPE Edition I: Registration Successful'
+		message = f'Greetings {participant_name}!\n\nWe wish to inform you that your registration for COPE Edition I was successful. We look forward to your participation.\n\nYours sincerely,\nShashwat Saini\nPresident\nThe Model United Nations Society'
+		email_headers = f'From: {email}\r\nTo: shashwatsaini290@gmail.com\r\nSubject: {subject}\r\n\r\n'
+		message = email_headers + message
+		smtp.sendmail(email, participant_mail_id, message)
+		smtp.quit()
+
+		app.logger.info(f'[{datetime.now()}] Mail: Registration mail sent.')
+
+	else:
+		app.logger.info(f'[{datetime.now()}] Mail: Mailing service is disabled')
 
 

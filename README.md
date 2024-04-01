@@ -9,7 +9,7 @@ Made using Flask, SQLAlchemy.
 
 It might be easier to run this app without GDrive functionality if you wish to contribute, to do so set FLAG_gdrive to False in app.py.
 
-You could also disable the mailing service, to do so set FLAG_mail to False in app.py.
+You could also disable the mailing service, to do so set FLAG_mail to False in app.py. See Development Notes for more info.
 
 ## Development Notes
 
@@ -68,6 +68,21 @@ GDrive synchronization is extremely important for the purposes of this app, to a
 ### Logging Implementation with Flask
 
 The app also includes an extensive logging setup. All initializations, requests, and GDrive statuses are constantly logged into webapp.log in root directory.
+
+### Google API & Client & SMTP Notes
+
+Google API Client uses a service account key in .json format, that you can get from 'Google Cloud Platform -> Service Account.' Refer to docs here: [Service Accounts Overview](https://cloud.google.com/iam/docs/service-account-overview).
+Rename this key to 'gcp_key.json' and add it to the root directory, to enable GDrive synchronization, an important process for the upkeep of the app.
+
+SMTP uses simple email and password features to login. To use with gmail, you must set 'smtp' variable in 'applications/controllers.py' to 'smtplib.SMTP('smtp.gmail.com', 587).'
+Follow the docs to connect other service providers: [SMTP docs](https://docs.python.org/3/library/smtplib.html).
+
+Our implementation makes use of a key in 'gmail_key.txt' with the syntax:
+```shell
+email:<add email here>
+password:<add app code here>
+```
+App code here refers to the app code for Gmail / Google accounts, that can be generated through 'Security -> 2 Factor Authentication' tab. Normal login passwords do not work.
 
 ## Copyright
 

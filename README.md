@@ -17,15 +17,6 @@ It might be easier to run this app without GDrive functionality if you wish to c
 3. Bootstrap | [docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 4. Google API Client | [docs](https://github.com/googleapis/google-api-python-client/blob/main/docs/README.md)
 
-### Robust Database Implementation
-The app implements a highly safe database to collect registration data, that is continuously being synchronized across three layers:
-
-1. The database itself.
-2. CSV file in root directory.
-3. GDrive.
-
-GDrive synchronization is extremely important for the purposes of this app, to access information easily without connecting to the corresponding cloud-hosted server setup.
-
 ### Folder Setup
 
 ```shell
@@ -61,6 +52,18 @@ If you wish to contribute to frontend, you would only need to focus on templates
 
 For backend, you would be focusing on all folders in the structure.
 
+### Robust Database Implementation
+The app implements a highly safe database to collect registration data, that is continuously being synchronized across three layers:
+
+1. The database itself.
+2. CSV file in root directory.
+3. GDrive.
+
+GDrive synchronization is extremely important for the purposes of this app, to access information easily without connecting to the corresponding cloud-hosted server setup.
+
+### Logging Implementation with Flask
+
+The app also includes an extensive logging setup. All initializations, requests, and GDrive statuses are constantly logged into webapp.log in root directory.
 
 ## Copyright
 

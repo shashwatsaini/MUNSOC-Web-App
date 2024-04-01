@@ -24,7 +24,7 @@ from application.controllers import *
 
 if __name__ == '__main__':
 	# Turn sync to false to use without gdrive implementation & keys
-	FLAG_gdrive = False
+	FLAG_gdrive = True
 	if FLAG_gdrive:
 		drive_service = auth('gcp_key.json', FLAG_gdrive)
 	app.run(host='0.0.0.0', port=5000)

@@ -69,7 +69,7 @@ GDrive synchronization is extremely important for the purposes of this app, to a
 
 The app also includes an extensive logging setup. All initializations, requests, and GDrive statuses are constantly logged into webapp.log in root directory.
 
-### Google API & Client & SMTP Notes
+### Google API Client & SMTP Notes
 
 Google API Client uses a service account key in .json format, that you can get from 'Google Cloud Platform -> Service Account.' Refer to docs here: [Service Accounts Overview](https://cloud.google.com/iam/docs/service-account-overview).
 Rename this key to 'gcp_key.json' and add it to the root directory, to enable GDrive synchronization, an important process for the upkeep of the app.

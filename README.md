@@ -4,9 +4,12 @@ Made using Flask, SQLAlchemy.
 ## Installation
 1. Install all python packages in requirements.txt.
 2. Setup Google-Oauth & relevant keys to synchronize database with GDrive.
-3. Run app.py for debugging.
+3. Setup SMTP login keys, a mail transfer protocol, to send automatic mails upon registration.
+4. Run app.py for debugging.
 
 It might be easier to run this app without GDrive functionality if you wish to contribute, to do so set FLAG_gdrive to False in app.py.
+
+You could also disable the mailing service, to do so set FLAG_mail to False in app.py.
 
 ## Development Notes
 
@@ -16,6 +19,7 @@ It might be easier to run this app without GDrive functionality if you wish to c
 2. Flask-SQLAlchemy | [docs](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/)
 3. Bootstrap | [docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 4. Google API Client | [docs](https://github.com/googleapis/google-api-python-client/blob/main/docs/README.md)
+5. Simple Mail Transfer Protocol (SMTP) | [docs](https://docs.python.org/3/library/smtplib.html)
 
 ### Folder Setup
 

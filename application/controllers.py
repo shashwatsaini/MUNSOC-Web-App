@@ -10,6 +10,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 drive_service = None
+gdrive_sync = False
 
 @app.route('/')
 def home():
@@ -64,16 +65,25 @@ def register():
 			return redirect('/')
 
 # Authentication for GCP
-def auth(key):
-	global drive_service
+def auth(key, FLAG_gdrive):
+	global drive_service, gdrive_sync
+	gdrive_sync = FLAG_gdrive
 
-	SCOPES = ['https://www.googleapis.com/auth/drive']
-	SERVICE_ACCOUNT_FILE = key
+	if gdrive_sync:
 
-	credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE)
-	drive_service = build('drive', 'v3', credentials=credentials)
+		SCOPES = ['https://www.googleapis.com/auth/drive']
+		SERVICE_ACCOUNT_FILE = key
 
-	return drive_service
+		credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE)
+		drive_service = build('drive', 'v3', credentials=credentials)
+
+		print('GDrive auth successful')
+
+		return drive_service
+
+	else: 
+		print('GDrive sync is disabled')
+		return None
 
 # Get or create folder in GDrive
 def get_or_create_folder(folder_name):
@@ -113,24 +123,28 @@ def add_folder_permission(folder_id, role='writer'):
 
 # Synchronize the csv format of the database with GDrive
 def synchronize_drive(file_path, folder_name='MUNSOC Web App'):
-    folder_id = get_or_create_folder(folder_name)
-    
-    # Search for the existing file in the folder
-    response = drive_service.files().list(q=f"name='{os.path.basename(file_path)}' and '{folder_id}' in parents",
-                                          fields='files(id)').execute()
-    files = response.get('files', [])
-    
-    if files:
-        file_id = files[0]['id']
-        # Update the existing file
-        media = MediaFileUpload(file_path, mimetype='application/octet-stream', resumable=True)      
-        file = drive_service.files().update(fileId=file_id, media_body=media).execute()
-        print(f"File '{os.path.basename(file_path)}' updated in folder '{folder_name}'")
-    else:
-        # Create the file if it doesn't exist
-        file_metadata = {'name': os.path.basename(file_path), 'parents': [folder_id]}
-        media = MediaFileUpload(file_path, mimetype='application/octet-stream', resumable=True)      
-        file = drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
-        print(f"File '{os.path.basename(file_path)}' created in folder '{folder_name}'")
+	if gdrive_sync:
+	    folder_id = get_or_create_folder(folder_name)
+	    
+	    # Search for the existing file in the folder
+	    response = drive_service.files().list(q=f"name='{os.path.basename(file_path)}' and '{folder_id}' in parents",
+	                                          fields='files(id)').execute()
+	    files = response.get('files', [])
+	    
+	    if files:
+	        file_id = files[0]['id']
+	        # Update the existing file
+	        media = MediaFileUpload(file_path, mimetype='application/octet-stream', resumable=True)      
+	        file = drive_service.files().update(fileId=file_id, media_body=media).execute()
+	        print(f"File '{os.path.basename(file_path)}' updated in folder '{folder_name}'")
+	    else:
+	        # Create the file if it doesn't exist
+	        file_metadata = {'name': os.path.basename(file_path), 'parents': [folder_id]}
+	        media = MediaFileUpload(file_path, mimetype='application/octet-stream', resumable=True)      
+	        file = drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
+	        print(f"File '{os.path.basename(file_path)}' created in folder '{folder_name}'")
+
+	else:
+		print('GDrive sync is disabled')	
 
 

@@ -23,5 +23,8 @@ app = create_app()
 from application.controllers import *
 
 if __name__ == '__main__':
-	drive_service = auth('gcp_key.json')
+	# Turn sync to false to use without gdrive implementation & keys
+	FLAG_gdrive = False
+	if FLAG_gdrive:
+		drive_service = auth('gcp_key.json', FLAG_gdrive)
 	app.run(host='0.0.0.0', port=5000)

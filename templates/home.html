@@ -9,6 +9,40 @@
 		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 		<!--Icon Library-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if(entry.isIntersecting) {
+						entry.target.classList.add('scroll-animate-active');
+						if (entry.target.classList.contains('options')) {
+							entry.target.classList.add('options-active');
+						}
+					} else {
+						entry.target.classList.remove('scroll-animate-active');
+						if (entry.target.classList.contains('options')) {
+							entry.target.classList.remove('options-active');
+							// Reset transition delay when element is scrolled out
+							entry.target.style.transitionDelay = "";
+						}
+					}
+				});
+			}, { threshold: 0.1 });
+
+			document.querySelectorAll('.scroll-animate, .options').forEach((section) => {
+				observer.observe(section);
+			});
+
+			const options = document.querySelectorAll('.options');
+			options.forEach((option, index) => {
+				// Calculate transition delay based on index
+				const delay = (index + 1) * 1; // Adjust timing as needed
+				option.style.transitionDelay = `${delay}s`;
+			});
+		});
+
+		</script>
+
 	</head>
 
 	<body>
@@ -18,7 +52,7 @@
     	</div>
 
     	<div id="main-content" class="fade-in">
-			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00204A;">
+			<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #00204A;">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="#" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
 
@@ -56,20 +90,20 @@
 
 				<br>
 
-				<div class="container-md" style="text-align: center;">
+
+				<div class="container-md scroll-animate" style="text-align: center;">
 					<div class="display-5">The Model United Nations Society</div>
 					<div class="display-7"> At Dayananda Sagar University</div>
 				</div>
 
 				<br>
 
-				<div class="container-md">
+				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
 				<br>
-
-				<div class="container-md">
+				<div class="container-md scroll-animate">
 					<div class="display-5">COPE Edition I</div>
 					<div class="display-7">The Conference of Public Exchange</div>
 					<p>The Debate Competition</p>
@@ -79,6 +113,8 @@
 					welcomes participants across three committees, engaging in
 					discussions on highly politicized and pressing agendas</p>
 					<br>
+				</div>
+				<div class="options">
 					<a href=""><button type="button" class="btn" style="background-color: #00204A; color: white; margin: 10px; width: 130px;">Poster</button></a>
 					<a href=""><button type="button" class="btn" style="background-color: #00204A; color: white; margin: 10px; width: 130px;">Brochure</button></a>
 					<a href="/register"><button type="button" class="btn" style="background-color: #00204A; color: white; margin: 10px; width: 130px;">Register Here</button></a>
@@ -86,13 +122,13 @@
 
 				<br>
 
-				<div class="container-md">
+				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
 				<br>
 
-				<div class="container-md">
+				<div class="container-md scroll-animate">
 					<div class="col-7 mx-auto" id="container-md">
 						<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 							<div class="carousel-inner">
@@ -130,13 +166,13 @@
 
 				<br>
 
-				<div class="container-md">
+				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
 				<br>
 
-				<div class="container-md">
+				<div class="container-md scroll-animate">
 					<div class="display-7">About Us</div>
 					<br>
 					<div class="display-8">
@@ -156,13 +192,13 @@
 
 				<br>
 
-				<div class="container-md">
+				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
 				<br>
 
-				<div class="container-md">
+				<div class="container-md scroll-animate">
 					<div class="display-7">About Dayananda Sagar University</div>
 					<br>
 					<div class="display-8">
@@ -175,9 +211,9 @@
 
 			</main>
 
-			<footer>
+			<footer class="scroll-animate">
 			    <div class="display-8">© 2024 Copyright: DSU Model United Nations Society</div>
-			    <div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>			    
+			    <div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>
 				<a class="fa fa-linkedin fa-lg" style="padding-right: 10px;" href="https://in.linkedin.com/company/dsu-model-united-nations-society"></a>
 				<a class="fa fa-instagram fa-lg" href="https://www.instagram.com/dsu_munsoc/?igsh=MWwydW53a28yeTIyYw%3D%3D"></a>
 				<br>

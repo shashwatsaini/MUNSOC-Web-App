@@ -32,9 +32,9 @@ from application.controllers import *
 
 if __name__ == '__main__':
 	# Turn this to false to use the app without gdrive implementation & keys
-	FLAG_drive = True
+	FLAG_gdrive = False
 	# Turn this to false to use the app without mailing service implementation
-	FLAG_mail = True
+	FLAG_mail = False
 	if FLAG_gdrive:
 		drive_service = auth('gcp_key.json', FLAG_gdrive)
 	if FLAG_mail:

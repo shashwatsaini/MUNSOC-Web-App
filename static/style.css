@@ -15,6 +15,15 @@
     .navbar-light .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); 
     }
+    .navbar-text{
+        text-align: center;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .navbar-text{
+        margin-right: 50px;
+    }
 }
 
 #loading-screen {
@@ -207,4 +216,34 @@ footer {
     padding-top: 90px;
 }
 
+.desktop{
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
 
+
+
+@media(max-width: 900px) {
+    .desktop{
+        background-image: url("background.png");
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+}
+
+.card-holder{
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border-radius: 5px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+}
+
+.col{
+    padding: 20px;
+}

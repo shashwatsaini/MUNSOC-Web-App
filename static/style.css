@@ -173,7 +173,7 @@ footer {
 }
 
 .carousel-image:hover {
-    filter: blur(5px);
+    filter: blur(0px);
 }
 
 .carousel-image:hover + .carousel-caption {
@@ -219,8 +219,6 @@ footer {
 .desktop{
     background-image: url("background.png");
     background-repeat: no-repeat;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
 }
 
 
@@ -229,21 +227,44 @@ footer {
     .desktop{
         background-image: url("background.png");
         background-repeat: no-repeat;
+        display: inline-block;
         overflow: hidden;
     }
+
 }
 
 .card-holder{
-    margin-right: auto;
-    margin-left: auto;
     box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
     border-radius: 5px;
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, 0.2);
     padding: 10px;
-    text-align: center;
+    display: grid;
 }
 
 .col{
     padding: 20px;
+}
+
+
+.cope:hover{
+    transform: scale(1.1);
+    border: solid 2px;
+    border-radius: 6px;
+}
+
+.card-holder {
+    text-align: left;
+}
+
+.textone h1 {
+    font-size: 90px;
+    color: yellow;
+    font-family: 'museo', sans-serif;
+}
+
+.textone h2 {
+    font-size: 60px;
+    color: white;
+    font-family: 'museo', sans-serif;
 }

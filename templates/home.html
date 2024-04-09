@@ -81,7 +81,7 @@
 				</div>
 			</div>
 		</nav>
-		
+
 			<main>
 
 				<div>
@@ -91,17 +91,21 @@
 				<br>
 
 				<div class="desktop">
-					<div class="container-md scroll-animate card-holder" style="text-align: center;">
-						<div class="display-5" style="text-decoration: solid;"><h1 style="font-size: 80px; color: yellow; font-family: museo;">The Model United Nations Society</h1></div>
-						<div class="display-7"><h2 style="font-size: 50px; font-family: museo; color: white;">At Dayananda Sagar University</h2></div>
+					<div class="card-holder scroll-animate" style="text-align: left;">
+						<div class="display-5 textone" style="text-decoration: solid;">
+							<h1 style="font-size: 90px; color: yellow; font-family: museo;">The Model United Nations Society</h1>
+						</div>
+						<div class="display-7 textone">
+							<h2 style="font-size: 60px; font-family: museo; color: white;">At Dayananda Sagar University</h2>
+						</div>
 					</div>
 
 					<br>
 
 					<div class="container-md scroll-animate">
-						<h1 style="font-weight: bold; text-align: left; margin-top: 25%; font-size: 60px; color: white;">COPE Edition I</h1>
+						<h1 class="textwo" style="font-weight: bold; text-align: left; margin-top: 25%; font-size: 60px; color: white;">COPE Edition I</h1>
 						<br>
-						<a href="/register" type="button" class="btn btn-warning" style="margin-right: 100%; margin-bottom: 12%; color: white;">Register</a>
+						<a href="/register" type="button" class="btn btn-warning" style="margin-right: 100%; margin-bottom: 11%; color: white;">Register</a>
 					</div>
 				</div>
 
@@ -109,32 +113,28 @@
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
-				<div class="container-md scroll-animate">
-					<div class="display-5">COPE Edition I</div>
-					<div class="display-7">The Conference of Public Exchange</div>
+				<div class="container-md my-5 scroll-animate cope">
+					<h2 class="display-5">COPE Edition I</h2>
+					<h3 class="display-7">The Conference of Public Exchange</h3>
 					<p>The Debate Competition</p>
 					<p>The COPE Edition I embodies our cherished ideals. Through
 					formal debate, our society provides an unimpeded avenue for diverse
 					ideologies, fostering a platform where opinions soar freely. Here, bias takes a backseat, and merit alone prevails. This inaugural event
 					welcomes participants across three committees, engaging in
-					discussions on highly politicized and pressing agendas</p>
-					<br>
-				</div>
-				<div class="options">
-					<a href=""><button type="button" class="btn" style="background-color: #00204A; color: white; margin: 10px; width: 130px;">Poster</button></a>
-					<a href=""><button type="button" class="btn" style="background-color: #00204A; color: white; margin: 10px; width: 130px;">Brochure</button></a>
-					<a href="/register"><button type="button" class="btn" style="background-color: #00204A; color: white; margin: 10px; width: 130px;">Register Here</button></a>
+					discussions on highly politicized and pressing agendas.</p>
 				</div>
 
-				<br>
+				<div class="text-center my-5">
+					<a href="" class="btn options" style="background-color: #00204A; color: white; margin: 10px; width: auto;">Poster</a>
+					<a href="" class="btn options" style="background-color: #00204A; color: white; margin: 10px; width: auto;">Brochure</a>
+					<a href="/register" class="btn options" style="background-color: #00204A; color: white; margin: 10px; width: auto;">Register Here</a>
+				</div>
 
 				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
-				<br>
-
-				<div class="container-md scroll-animate">
+				<div class="container-md my-5 scroll-animate">
 					<div class="col-7 mx-auto" id="container-md">
 						<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 							<div class="carousel-inner">
@@ -168,21 +168,13 @@
 						</div>
 					</div>
 				</div>
-
-
-				<br>
-
 				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
-				<br>
-
-				<div class="container-md scroll-animate">
-					<div class="display-7">About Us</div>
-					<br>
-					<div class="display-8">
-						<p>Established in 2023, the Model United Nations Society at
+				  <div class="container-md my-5 scroll-animate cope">
+					<h3 class="display-7">About Us</h3>
+					<p>	Established in 2023, the Model United Nations Society at
 						Dayananda Sagar University is committed to raising awareness about
 						global events and influential personalities. Our mission centers on
 						cultivating indispensable skills—diplomacy, leadership, research, and
@@ -193,25 +185,17 @@
 						relics of a bygone era, must be consigned to history. As torchbearers
 						of the next generation, we bear the responsibility of safeguarding
 						principles bestowed upon us by democratic institutions, a free press,
-						and international cooperation.
-				</div>
-
-				<br>
+						and international cooperation.</p>
+				  </div>
 
 				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
-				<br>
-
-				<div class="container-md scroll-animate">
-					<div class="display-7">About Dayananda Sagar University</div>
-					<br>
-					<div class="display-8">
-						<p>In the six decades since the establishment of Dayananda Sagar Institutions in 1960, the group has grown into one of India’s leading educational institutions today. This growth is the result of the institutions focused effort to advance knowledge and educate students in all disciplines, from medicine to engineering, and law to commerce. The pursuit of excellence, fairness, leadership, and integrity & transparency are values that drive our institutions.
-						</p>
-					</div>
-				</div>
+				  <div class="container-md my-5 scroll-animate cope">
+					<h3 class="display-7">About Dayananda Sagar University</h3>
+					<p>In the six decades since the establishment of Dayananda Sagar Institutions in 1960, the group has grown into one of India’s leading educational institutions today. This growth is the result of the institutions focused effort to advance knowledge and educate students in all disciplines, from medicine to engineering, and law to commerce. The pursuit of excellence, fairness, leadership, and integrity & transparency are values that drive our institutions.</p>
+				  </div>
 
 				<br><br><br>
 
@@ -225,6 +209,7 @@
 				<br>
 				<img src="{{ url_for('static', filename='logo_white.png') }}" width="5%" height="5%">
 			</footer>
+
 
 		</div>
 

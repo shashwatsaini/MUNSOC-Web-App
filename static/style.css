@@ -248,7 +248,7 @@ footer {
 
 
 .cope:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     border: solid 2px;
     border-radius: 6px;
 }

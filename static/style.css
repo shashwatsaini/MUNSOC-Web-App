@@ -10,10 +10,20 @@
 
 @media (max-width: 991.98px) {
     .navbar-light .navbar-nav .nav-link {
-        color: white; 
+        color: white;
     }
     .navbar-light .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop h1 {
+        font-size: 40px;
+    }
+
+    .desktop h2 {
+        font-size: 24px;
     }
 }
 
@@ -39,7 +49,7 @@
 
 #main-content {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;	
+    transition: opacity 0.5s ease-in-out;
 }
 
 #main-content.fade-in {
@@ -161,10 +171,13 @@ footer {
 
 .carousel-image {
     transition: filter 0.3s ease;
+    max-width: 100%;
+    height: auto;
 }
 
+
 .carousel-image:hover {
-    filter: blur(5px);
+    filter: blur(0px);
 }
 
 .carousel-image:hover + .carousel-caption {
@@ -174,9 +187,6 @@ footer {
 .card-title{
     font-size: larger;
     font-weight: bold;
-<<<<<<< Updated upstream
-}
-=======
 }
 /* Initial State */
 .scroll-animate {
@@ -275,4 +285,3 @@ footer {
     color: white;
     font-family: 'museo', sans-serif;
 }
->>>>>>> Stashed changes

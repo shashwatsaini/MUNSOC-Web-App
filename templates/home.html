@@ -9,6 +9,7 @@
 		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 		<!--Icon Library-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			const observer = new IntersectionObserver((entries) => {
@@ -42,6 +43,14 @@
 		});
 
 		</script>
+		<style>
+			@media only screen and (max-width: 768px) {
+				.desktop h1,
+				.desktop h2 {
+					font-size: 60px;
+				}
+			}
+		</style>
 
 	</head>
 
@@ -53,26 +62,23 @@
 
     	<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #00204A;">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="/" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
-
+				<a class="navbar-brand" href="/" style="margin-left: 50px; padding: 5px">
+					<img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height="50" width="50">
+				</a>
 				<a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">DSU MUNSOC</a>
-
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarText">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
+						<li class="nav-item" style="text-align: left;">
 							<a class="nav-link" href="/" id="navbar_text">Home </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/events" id="navbar_text">Events </a>
+							<a class="nav-link" href="/events" id="navbar_text" style="text-align: left;">Events </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/the-secretariat" id="navbar_text">The Secretariat</a></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/register" id="navbar_text">Register for COPE Edition I</a>
+							<a class="nav-link" href="/the-secretariat" id="navbar_text" style="text-align: left;">The Secretariat</a></a>
 						</li>
 					</ul>
 					<span class="navbar-text" style="font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
@@ -81,6 +87,7 @@
 				</div>
 			</div>
 		</nav>
+
 
 			<main>
 
@@ -93,7 +100,7 @@
 				<div class="desktop">
 					<div class="card-holder scroll-animate" style="text-align: left;">
 						<div class="display-5 textone" style="text-decoration: solid;">
-							<h1 style="font-size: 90px; color: yellow; font-family: museo;">The Model United Nations Society</h1>
+							<h1 style= "color: yellow; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bolder;">The Model United Nations Society</h1>
 						</div>
 						<div class="display-7 textone">
 							<h2 style="font-size: 60px; font-family: museo; color: white;">At Dayananda Sagar University</h2>
@@ -101,12 +108,6 @@
 					</div>
 
 					<br>
-
-					<div class="container-md scroll-animate">
-						<h1 class="textwo" style="font-weight: bold; text-align: left; margin-top: 25%; font-size: 60px; color: white;">COPE Edition I</h1>
-						<br>
-						<a href="/register" type="button" class="btn btn-warning" style="margin-right: 100%; margin-bottom: 11%; color: white;">Register</a>
-					</div>
 				</div>
 
 				<div class="container-md scroll-animate">
@@ -135,7 +136,7 @@
 				</div>
 
 				<div class="container-md my-5 scroll-animate">
-					<div class="col-7 mx-auto" id="container-md">
+					<div class="col-12 col-md-7 mx-auto" id="container-md">
 						<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
@@ -173,6 +174,7 @@
 				</div>
 
 				  <div class="container-md my-5 scroll-animate cope">
+					<br>
 					<h3 class="display-7">About Us</h3>
 					<p>	Established in 2023, the Model United Nations Society at
 						Dayananda Sagar University is committed to raising awareness about
@@ -193,6 +195,7 @@
 				</div>
 
 				  <div class="container-md my-5 scroll-animate cope">
+					<br>
 					<h3 class="display-7">About Dayananda Sagar University</h3>
 					<p>In the six decades since the establishment of Dayananda Sagar Institutions in 1960, the group has grown into one of India’s leading educational institutions today. This growth is the result of the institutions focused effort to advance knowledge and educate students in all disciplines, from medicine to engineering, and law to commerce. The pursuit of excellence, fairness, leadership, and integrity & transparency are values that drive our institutions.</p>
 				  </div>

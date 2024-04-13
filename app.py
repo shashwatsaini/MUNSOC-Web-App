@@ -32,11 +32,11 @@ from application.controllers import *
 
 if __name__ == '__main__':
 	# Turn this to false to use the app without gdrive implementation & keys
-	FLAG_drive = True
+	FLAG_drive = False
 	# Turn this to false to use the app without mailing service implementation
-	FLAG_mail = True
+	FLAG_mail = False
 	if FLAG_drive:
-		drive_service = auth('gcp_key.json', FLAG_gdrive)
+		drive_service = auth('gcp_key.json', FLAG_drive)
 	if FLAG_mail:
 		init_email(FLAG_mail)
 	app.logger.info(f'[{datetime.now()}] Web App Started')

@@ -174,4 +174,105 @@ footer {
 .card-title{
     font-size: larger;
     font-weight: bold;
+<<<<<<< Updated upstream
 }
+=======
+}
+/* Initial State */
+.scroll-animate {
+    opacity: 0;
+    transform: translateX(-100px);
+    visibility: hidden;
+  }
+
+  /* Final State (After Animation) */
+.scroll-animate-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    visibility: visible;
+}
+
+.options{
+    opacity: 0;
+    transform: translateX(-100px);
+    visibility: hidden;
+}
+
+.options-active{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    visibility: visible;
+}
+
+.display-5,.display-5{
+    padding-top: 90px;
+}
+
+.desktop {
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+
+.desktop h1{
+    font-size: 90px;
+}
+
+.desktop h2{
+    font-size: 60px;
+}
+
+
+
+
+
+@media(max-width: 900px) {
+    .desktop{
+        background-image: url("background.png");
+        background-repeat: no-repeat;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+}
+
+.card-holder{
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(70, 70, 70, 0.2);
+    padding: 10px;
+    display: grid;
+}
+
+.col{
+    padding: 20px;
+}
+
+
+.cope:hover{
+    transform: scale(1.05);
+    border: solid 2px;
+    border-radius: 6px;
+}
+
+.card-holder {
+    text-align: left;
+}
+
+.textone h1 {
+    font-size: 90px;
+    color: yellow;
+    font-family: 'museo', sans-serif;
+}
+
+.textone h2 {
+    font-size: 60px;
+    color: white;
+    font-family: 'museo', sans-serif;
+}
+>>>>>>> Stashed changes

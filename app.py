@@ -35,7 +35,7 @@ if __name__ == '__main__':
 	FLAG_drive = True
 	# Turn this to false to use the app without mailing service implementation
 	FLAG_mail = True
-	if FLAG_gdrive:
+	if FLAG_drive:
 		drive_service = auth('gcp_key.json', FLAG_gdrive)
 	if FLAG_mail:
 		init_email(FLAG_mail)

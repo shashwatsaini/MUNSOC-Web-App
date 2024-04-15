@@ -25,6 +25,10 @@
     .desktop h2 {
         font-size: 24px;
     }
+    .carousel-item img{
+        width: 100%;
+        height: 300px !important;
+    }
 }
 
 #loading-screen {
@@ -225,7 +229,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 97vh;
+    height: 85vh;
 }
 
 .desktop h1{
@@ -253,7 +257,7 @@ footer {
 .card-holder{
     box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
     border-radius: 5px;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(20px);
     background-color: rgba(70, 70, 70, 0.2);
     padding: 10px;
     display: grid;

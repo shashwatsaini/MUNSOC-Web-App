@@ -9,9 +9,6 @@ from flask import render_template, request, redirect, url_for
 from application.database import db
 from application.models import Teams
 import pandas as pd
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaFileUpload
 
 drive_service = None
 gdrive_sync = False
@@ -84,6 +81,10 @@ def register():
 
 # Authentication for GCP
 def auth(key, FLAG_gdrive):
+	from google.oauth2 import service_account
+	from googleapiclient.discovery import build
+	from googleapiclient.http import MediaFileUpload
+	
 	global drive_service, gdrive_sync
 	gdrive_sync = FLAG_gdrive
 

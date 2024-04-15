@@ -47,7 +47,7 @@
 			@media only screen and (max-width: 768px) {
 				.desktop h1,
 				.desktop h2 {
-					font-size: 60px;
+					font-size: 30px !important;
 				}
 			}
 		</style>
@@ -81,7 +81,7 @@
 							<a class="nav-link" href="/the-secretariat" id="navbar_text" style="text-align: left;">The Secretariat</a></a>
 						</li>
 					</ul>
-					<span class="navbar-text" style="font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
+					<span class="navbar-text d-none" style="font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
 						The Model United Nations Society
 					</span>
 				</div>
@@ -100,7 +100,7 @@
 				<div class="desktop">
 					<div class="card-holder scroll-animate" style="text-align: left;">
 						<div class="display-5 textone" style="text-decoration: solid;">
-							<h1 style= "color: yellow; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bolder;">The Model United Nations Society</h1>
+							<h1 style= "color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bolder;">The Model United Nations Society</h1>
 						</div>
 						<div class="display-7 textone">
 							<h2 style="font-size: 60px; font-family: museo; color: white;">At Dayananda Sagar University</h2>
@@ -110,12 +110,15 @@
 					<br>
 				</div>
 
+					<br>
+				</div>
+
 				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
 				<div class="container-md my-5 scroll-animate cope">
-					<h2 class="display-5">COPE Edition I</h2>
+					<h2 class="display-5" style="padding-top: 0px;">COPE Edition I</h2>
 					<h3 class="display-7">The Conference of Public Exchange</h3>
 					<p>The Debate Competition</p>
 					<p>The COPE Edition I embodies our cherished ideals. Through
@@ -136,10 +139,17 @@
 				</div>
 
 				<div class="container-md my-5 scroll-animate">
+					<h2 class="display-5" style="padding-top: 0px;">Our Gallery</h2>
 					<div class="col-12 col-md-7 mx-auto" id="container-md">
 						<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
+									<img src="{{ url_for('static', filename='img/carousel4.jpg') }}" class="d-block w-100 carousel-image" alt="...">
+									<div class="carousel-caption d-none d-md-block">
+										<h5 id="caption">COPE Edition I: The Conference of Public Exchange</h5>
+									</div>
+								</div>
+								<div class="carousel-item">
 									<img src="{{ url_for('static', filename='img/carousel1.jpg') }}" class="d-block w-100 carousel-image" alt="...">
 									<div class="carousel-caption d-none d-md-block">
 										<h5 id="caption">The Society at Our Inaugural Event</h5>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="{{ url_for('static', filename='logo_white_notext.svg') }}" type="image/svg">
+    <title>DSU MUNSOC</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!--Icon Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+        .banner {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            flex-direction: column;
+            text-align: center;
+        }
+        .image_banner img {
+            max-width: 100%;
+            height: auto;
+        }
+        .registration, .brochure {
+            margin-top: 20px; /* Add some spacing */
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #00204A;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="margin-left: 50px; padding: 5px">
+            <img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height="50" width="50">
+        </a>
+        <a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">DSU MUNSOC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" style="text-align: left;">
+                    <a class="nav-link" href="/" id="navbar_text">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events" id="navbar_text" style="text-align: left;">Events </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/the-secretariat" id="navbar_text" style="text-align: left;">The Secretariat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dsumun" id="navbar_text" style="text-align: left;">DSUMUN</a>
+                </li>
+            </ul>
+            <span class="navbar-text d-none" style="font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
+                The Model United Nations Society
+            </span>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+</main>
+
+<footer class="footer">
+    <div class="display-8">© 2024 Copyright: DSU Model United Nations Society</div>
+    <div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>
+    <a class="fa fa-linkedin fa-lg" style="padding-right: 10px;" href="https://in.linkedin.com/company/dsu-model-united-nations-society"></a>
+    <a class="fa fa-instagram fa-lg" href="https://www.instagram.com/dsu_munsoc/?igsh=MWwydW53a28yeTIyYw%3D%3D"></a>
+    <br>
+    <img src="{{ url_for('static', filename='logo_white.png') }}" width="5%" height="5%">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</footer>
+</body>
+</html>

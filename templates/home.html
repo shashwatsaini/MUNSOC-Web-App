@@ -80,6 +80,9 @@
 						<li class="nav-item">
 							<a class="nav-link" href="/the-secretariat" id="navbar_text" style="text-align: left;">The Secretariat</a></a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/dsumun" id="navbar_text" style="text-align: left;">DSUMUN</a>
+						</li>
 					</ul>
 					<span class="navbar-text d-none" style="font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
 						The Model United Nations Society
@@ -97,21 +100,45 @@
 
 				<br>
 
-				<div class="desktop">
-					<div class="card-holder scroll-animate" style="text-align: left;">
-						<div class="display-5 textone" style="text-decoration: solid;">
-							<h1 style= "color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bolder;">The Model United Nations Society</h1>
-						</div>
-						<div class="display-7 textone">
-							<h2 style="font-size: 60px; font-family: museo; color: white;">At Dayananda Sagar University</h2>
-						</div>
-					</div>
+				<div class="background"></div>
+    			<div class="banner">
+					<div class="blur-overlay">
+        			<div class="row">
+            			<div class="image_banner">
+                			<img src="{{ url_for('static', filename='img/dsumun/MUNSOCLOGO2-white.png') }}" alt="munsocimage" id="img1">
+            			</div>
+            			<hr class="hr hr-blurry" style="height: 1px;">
+            			<div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                			<div class="header_banner">
+                    			<h1>DSUMUN</h1>
+                			</div>
+                			<div class="text_banner">
+                    			<h4>Dayananda Sagar University</h4>
+                    			<h4>Model United Nations</h4>
+                			</div>
+                			<div class="edition_banner">
+                    			<h2>Edition I</h2>
+                			</div>
+                			<div class="dates">
+                    			<h2>24th - 25th May</h2>
+                			</div>
+            			</div>
 
-					<br>
+            <!-- Right Column -->
+            			<div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                			<div class="registration">
+                    			<h2>Register Below</h2>
+                    				<a class="btn btn-primary" type="button">Register</a>
+                			</div>
+                			<div class="brochure">
+                    			<h2>Brochure</h2>
+                    			<a class="btn btn-primary" type="button">Brochure</a>
+                			</div>
+            			</div>
+        			</div>
 				</div>
+    			</div>
 
-					<br>
-				</div>
 
 				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
@@ -214,7 +241,7 @@
 
 			</main>
 
-			<footer class="scroll-animate">
+			<footer>
 			    <div class="display-8">© 2024 Copyright: DSU Model United Nations Society</div>
 			    <div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>
 				<a class="fa fa-linkedin fa-lg" style="padding-right: 10px;" href="https://in.linkedin.com/company/dsu-model-united-nations-society"></a>

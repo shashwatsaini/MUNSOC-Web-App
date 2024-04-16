@@ -125,6 +125,9 @@ footer {
 	text-align: center;
 	width: 100%;
 	padding: 20px;
+    position: relative;
+    bottom: 0;
+    z-index: -1;
 }
 
 
@@ -289,3 +292,160 @@ footer {
     color: white;
     font-family: 'museo', sans-serif;
 }
+
+.background {
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    background-position: center;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.banner {
+    margin-top: 20px;
+    background-image: url("backgroundMUN.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+
+.blur-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+    z-index: -1;
+}
+
+
+.image_banner {
+    flex: 0 0 auto;
+    margin-top: 80px;
+    margin-right: 20px;;
+    margin-bottom: 20px;
+}
+
+.header_banner,
+.text_banner,
+.edition_banner,
+.dates,
+.registration,
+.brochure {
+    text-align: center;
+}
+
+#img1 {
+    width: auto;
+    height: 200px;
+}
+
+.header_banner h1 {
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    color: white;
+}
+
+.text_banner h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.edition_banner h2,
+.dates h2{
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.registration h2,
+.brochure h2{
+    font-size: 80px;
+    font-weight: bold;
+    display: block;
+    flex-direction: column;
+    color: white;
+}
+
+.registration a,
+.brochure a {
+    display: inline-block;
+    margin-top: 20px; /* Adjust margin as needed */
+    padding: 10px 20px;
+}
+hr{
+    color: white;
+}
+@media (max-width: 900px) {
+    .background {
+        margin-top: 0; /* Adjust margin as needed */
+    }
+
+    .banner {
+        padding: 10px;
+        border: none;
+    }
+
+    .image_banner,
+    .header_banner,
+    .text_banner,
+    .edition_banner,
+    .dates,
+    .registration,
+    .brochure {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #img1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .header_banner h1 {
+        font-size: 40px; /* Adjust font size as needed */
+    }
+
+    .text_banner h4 {
+        font-size: 20px; /* Adjust font size as needed */
+    }
+
+    .edition_banner h2,
+    .dates h2,
+    .registration h2,
+    .brochure h2 {
+        font-size: 40px; /* Adjust font size as needed */
+    }
+
+    .registration a,
+    .brochure a {
+        display: block;
+        margin-top: 10px; /* Adjust margin as needed */
+    }
+    .footer {
+	    font-family: 'museo';
+	    color: white;
+	    background-color: #00204A;
+	    text-align: center;
+	    width: 100%;
+	    padding: 20px;
+        position: relative;
+        z-index: -1;
+    }
+}
+
+

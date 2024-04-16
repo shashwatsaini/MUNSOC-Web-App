@@ -29,6 +29,11 @@ def secretariat():
 	app.logger.info(f'[{datetime.now()}] GET: secretariat.html')
 	return render_template('secretariat.html')
 
+@app.route('/dsumun')
+def DSUMUN():
+	app.logger.info(f'[{datetime.now()}] GET: dsumun.html')
+	return render_template('DSUMUN.html')
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
 	global drive_service

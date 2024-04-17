@@ -41,3 +41,6 @@ if __name__ == '__main__':
 		init_email(FLAG_mail)
 	app.logger.info(f'[{datetime.now()}] Web App Started')
 	app.run(host='0.0.0.0', port=5000)
+
+
+	

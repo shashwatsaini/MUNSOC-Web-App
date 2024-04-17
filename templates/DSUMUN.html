@@ -14,20 +14,6 @@
         body {
             padding-top: 80px;
         }
-        .banner {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            flex-direction: column;
-            text-align: center;
-        }
-        .image_banner img {
-            max-width: 100%;
-            height: auto;
-        }
-        .registration, .brochure {
-            margin-top: 20px; /* Add some spacing */
-        }
     </style>
 </head>
 <body>
@@ -63,7 +49,76 @@
 </nav>
 
 <main>
-
+    <div class="container-fluid">
+        <div class="row about-container">
+            <div class="col-12">
+                <h1 style="font-weight: bolder; font-family: museo;">About DSUMUN</h1>
+            </div>
+            <br>
+            <br>
+            <div class="col-12">
+                <div class="card about-card w-75 mx-auto">
+                    <div class="card-body about-body">
+                      <p class="card-text" style="font-family: 'museo';">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia at quis risus sed vulputate odio ut enim. Nisl nisi scelerisque eu ultrices vitae auctor. Ut lectus arcu bibendum at varius vel pharetra vel. Tempus urna et pharetra pharetra massa massa. Felis imperdiet proin fermentum leo. Nec feugiat in fermentum posuere. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed. Turpis nunc eget lorem dolor sed viverra ipsum. Dis parturient montes nascetur ridiculus mus. Convallis convallis tellus id interdum velit. Lacus vestibulum sed arcu non odio euismod. Sem nulla pharetra diam sit. Turpis massa sed elementum tempus egestas sed sed risus. Pulvinar mattis nunc sed blandit libero volutpat sed. Eget duis at tellus at urna condimentum mattis pellentesque id.</p>
+                      <p class="card-text" style="font-family: 'museo';">Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Urna neque viverra justo nec ultrices dui. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Sed enim ut sem viverra aliquet eget sit amet tellus. Nunc sed velit dignissim sodales ut. Pellentesque habitant morbi tristique senectus et netus. Nisl nunc mi ipsum faucibus vitae. Pellentesque habitant morbi tristique senectus et. Egestas tellus rutrum tellus pellentesque eu. Fames ac turpis egestas maecenas pharetra convallis. Libero enim sed faucibus turpis. Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit. In cursus turpis massa tincidunt. Enim sit amet venenatis urna cursus eget nunc. Placerat in egestas erat imperdiet sed euismod nisi porta. Rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Nunc id cursus metus aliquam eleifend mi in.</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="container-fluid committee-container">
+            <div class="contianer-header">
+                <h1 style="font-weight: bolder; font-family: museo; color: white;">Our Committees</h1>
+            </div>
+            <div class="row committees-container">
+                <div class="col-12 col-md-3">
+                    <div class="card committee-card mb-3">
+                        <img src="{{ url_for('static', filename='img/dsumun/UNSC2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
+                        <h1 class="card-title" style="font-size: 30px;">UNSC</h1>
+                        <div class="card-body agenda-body">
+                            <h1 class="card-text" style="font-size: 50px;">Agenda</h1>
+                            <p class="card-text">Turkey’s Aggression
+                                in Syria and Iraq</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card committee-card mb-3">
+                        <img src="{{ url_for('static', filename='img/dsumun/DISEC2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
+                        <h1 class="card-title" style="font-size: 30px;">DISEC</h1>
+                        <div class="card-body agenda-body">
+                            <h1 class="card-text" style="font-size: 50px;">Agenda</h1>
+                            <p class="card-text"> Cyber Crime Threats
+                                During Elections</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card committee-card mb-3">
+                        <img src="{{ url_for('static', filename='img/dsumun/WHO2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
+                        <h1 class="card-title" style="font-size: 30px;">WHO</h1>
+                        <div class="card-body agenda-body">
+                            <h1 class="card-text" style="font-size: 50px;">Agenda</h1>
+                            <p class="card-text"> Manipur Ethnic
+                                Violence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card committee-card mb-3">
+                        <img src="{{ url_for('static', filename='img/dsumun/Lok Sabha2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
+                        <h1 class="card-title" style="font-size: 30px;">Lok Sabha</h1>
+                        <div class="card-body agenda-body">
+                            <h1 class="card-text" style="font-size: 50px;">Agenda</h1>
+                            <p class="card-text"> Patent Pooling for
+                                Medicines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
 </main>
 
 <footer class="footer">

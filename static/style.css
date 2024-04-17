@@ -138,7 +138,7 @@ footer {
   font-size: 50px;
   width: 50px;
   text-align: center;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .fa:hover {
@@ -448,4 +448,96 @@ hr{
     }
 }
 
+.about-container{
+    margin-top: 60px;
+}
+
+.about-card{
+    margin-bottom: 50px;
+}
+
+.about-card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+
+  .about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  #unsc{
+    width: auto;
+    height: 300px;
+  }
+
+  .unsc-card{
+    padding: 10%;
+  }
+
+  .committee-container {
+    background-color: #00204A;
+    padding: 20px; /* Padding to ensure cards do not touch the edge of the container */
+    font-family: 'museo'; /* Clean and simple font for the content */
+}
+
+/* Styling the card with a box shadow */
+.committee-card{
+    transition: transform 0.3s ease; /* Smooth transition for transform and shadow */
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: #00204A;
+}
+
+/* Transform effect on hover */
+.committee-card:hover {
+    transform: scale(1.03); /* Scales up the card slightly */
+}
+
+/* Ensuring images fit well in the card */
+.card-img-top {
+    width: 90%; /* Reducing the width to fit the card better */
+    margin-top: 10px; /* Adding some space at the top inside the card */
+    margin-bottom: 10px; /* Adding some space at the bottom above the title */
+}
+
+/* Styling for card titles to make them more prominent */
+.card-title {
+    text-align: center; /* Centers the title text */
+    font-size: 24px; /* Increase the font size for visibility */
+}
+
+.agenda-body{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+.committee-card:hover .agenda-body{
+    right: 0;
+}
+
+.committee-card .card-title{
+    color: white;
+    font-family: 'museo';
+}
+
+.agenda-body .card-text{
+    padding-top: 40px;
+    font-family: 'museo';
+    font-weight: bolder;
+    font-size: 30px;
+    color: white;
+    text-shadow: -1px 1px 0 black,
+    1px 1px 0 black,
+    1px -1px 0 black,
+    -1px -1px 0 black
+}
 

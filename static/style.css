@@ -297,9 +297,9 @@ footer {
     margin-top: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
-    min-height: 100%;
+    height: 100vh;
     width: 100%;
+    min-height: 100%;
     background-position: center;
     z-index: -1;
     position: fixed;
@@ -309,12 +309,13 @@ footer {
 
 .banner {
     margin-top: 20px;
-    background-image: url("backgroundMUN.jpg");
+    background-image: url("munsochomebg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 0;
+    overflow: hidden;
 }
 
 .blur-overlay {
@@ -323,7 +324,8 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+    backdrop-filter: blur(8px); /* Adjust the blur intensity as needed */
+    background-color: rgba(129, 109, 237, 0.5);
     z-index: -1;
 }
 
@@ -331,17 +333,25 @@ footer {
 .image_banner {
     flex: 0 0 auto;
     margin-top: 80px;
-    margin-right: 20px;;
     margin-bottom: 20px;
 }
 
-.header_banner,
+.header_banner{
+    margin-top: 80px;
+    text-align: center;
+    font-family: 'museo-sans';
+    font-weight: bolder;
+}
+
 .text_banner,
 .edition_banner,
 .dates,
 .registration,
 .brochure {
     text-align: center;
+    font-family: 'museo-sans';
+    font-weight: bolder;
+    margin: 3.5vh;
 }
 
 #img1 {
@@ -351,40 +361,27 @@ footer {
 
 .header_banner h1 {
     font-size: 100px;
-    font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 15px;
-    color: white;
+    color:#FFD700;
 }
 
 .text_banner h4 {
     font-size: 30px;
-    font-weight: bold;
     color: white;
 }
 
 .edition_banner h2,
 .dates h2{
     font-size: 80px;
-    font-weight: bold;
     color: white;
-    margin-bottom: 50px;
 }
 
-.registration h2,
-.brochure h2{
-    font-size: 80px;
-    font-weight: bold;
-    display: block;
-    flex-direction: column;
-    color: white;
-}
 
 .registration a,
 .brochure a {
     display: inline-block;
     margin-top: 20px; /* Adjust margin as needed */
     padding: 10px 20px;
+    margin-top: 3%;
 }
 hr{
     color: white;
@@ -395,7 +392,6 @@ hr{
     }
 
     .banner {
-        padding: 10px;
         border: none;
     }
 
@@ -418,6 +414,7 @@ hr{
 
     .header_banner h1 {
         font-size: 40px; /* Adjust font size as needed */
+        margin-top: 30px;
     }
 
     .text_banner h4 {
@@ -449,22 +446,22 @@ hr{
 }
 
 .about-container{
-    margin-top: 60px;
+    margin-top: 100px;
+    padding-top: 40px;
 }
 
 .about-card{
     margin-bottom: 50px;
+    border: none;
 }
 
 .about-card {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
 
   .about-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   }
 
   #unsc{
@@ -541,3 +538,122 @@ hr{
     -1px -1px 0 black
 }
 
+.prizepool-one, .prizepool-two {
+    font-family: 'museo-sans';
+    font-weight: bolder;
+    background-image: url("img/dsumun/dsumunbackground.jpg");
+    background-size: contain; /* Adjusted to 'contain' */
+    -webkit-background-clip: text;
+    background-position: center; /* Center the background image */
+    color: transparent;
+}
+
+.prizepool-one {
+    font-size: 100px;
+}
+
+.prizepool-two {
+    font-size: 200px;
+}
+
+.list-group {
+    border: none;
+}
+
+.list-group-item {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    padding: 0.5rem 0;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.queries{
+    font-family: 'museo';
+    font-size: 50px;
+}
+
+.one{
+    font-family: 'museo-sans';
+    font-size: 30px;
+}
+
+.list-group-item{
+    font-family: 'museo';
+    font-size: 20px;
+}
+
+#reg{
+    font-family: 'museo';
+    font-size: 50px;
+}
+
+.btn-outline {
+    color: #00204A;
+    background-color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'museo';
+    letter-spacing: 0.05em;
+    border-radius: 10px;
+  }
+
+  .btn-outline:hover,
+  .btn-outline:active,
+  .btn-outline:focus,
+  .btn-outline.active {
+    background: #FFD700;
+    color: #ffffff;
+    border-color: #FFD700;
+  }
+
+#reg-button{
+    padding: 20px;
+}
+#br-button{
+    padding: 20px;
+}
+
+.reg-button{
+    text-align: right;
+}
+
+.brochure-button{
+    text-align: left;
+}
+
+
+.about-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    background-position: center;
+    background-image: url("img/dsumun/dsumunaboutbg.jpg");
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.about-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/dsumun/dsumunaboutbg.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur intensity as needed */
+    z-index: -1;
+}

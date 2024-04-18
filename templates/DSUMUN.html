@@ -10,11 +10,55 @@
     <!--Icon Library-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+
     <style>
         body {
             padding-top: 80px;
         }
     </style>
+    <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if(entry.isIntersecting) {
+						entry.target.classList.add('scroll-animate-active');
+						if (entry.target.classList.contains('options')) {
+							entry.target.classList.add('options-active');
+						}
+					} else {
+						entry.target.classList.remove('scroll-animate-active');
+						if (entry.target.classList.contains('options')) {
+							entry.target.classList.remove('options-active');
+							// Reset transition delay when element is scrolled out
+							entry.target.style.transitionDelay = "";
+						}
+					}
+				});
+			}, { threshold: 0.1 });
+
+			document.querySelectorAll('.scroll-animate, .options').forEach((section) => {
+				observer.observe(section);
+			});
+
+			const options = document.querySelectorAll('.options');
+			options.forEach((option, index) => {
+				// Calculate transition delay based on index
+				const delay = (index + 1) * 1; // Adjust timing as needed
+				option.style.transitionDelay = `${delay}s`;
+			});
+		});
+
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var backgroundPosition = 'center ' + (-scrollPosition / 2) + 'px'; // Adjust the divisor to control the speed of movement
+            document.querySelector('.prizepool-one').style.backgroundPosition = backgroundPosition;
+            document.querySelector('.prizepool-two').style.backgroundPosition = backgroundPosition;
+        });
+
+
+		</script>
+
 </head>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #00204A;">
@@ -49,29 +93,49 @@
 </nav>
 
 <main>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row about-container">
-            <div class="col-12">
-                <h1 style="font-weight: bolder; font-family: museo;">About DSUMUN</h1>
+            <div class="col-12 scroll-animate">
+                <h1 style="font-weight: bolder; font-family: museo-sans; color: white; font-size: 60px;">About DSUMUN</h1>
             </div>
             <br>
             <br>
-            <div class="col-12">
-                <div class="card about-card w-75 mx-auto">
-                    <div class="card-body about-body">
-                      <p class="card-text" style="font-family: 'museo';">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia at quis risus sed vulputate odio ut enim. Nisl nisi scelerisque eu ultrices vitae auctor. Ut lectus arcu bibendum at varius vel pharetra vel. Tempus urna et pharetra pharetra massa massa. Felis imperdiet proin fermentum leo. Nec feugiat in fermentum posuere. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed. Turpis nunc eget lorem dolor sed viverra ipsum. Dis parturient montes nascetur ridiculus mus. Convallis convallis tellus id interdum velit. Lacus vestibulum sed arcu non odio euismod. Sem nulla pharetra diam sit. Turpis massa sed elementum tempus egestas sed sed risus. Pulvinar mattis nunc sed blandit libero volutpat sed. Eget duis at tellus at urna condimentum mattis pellentesque id.</p>
-                      <p class="card-text" style="font-family: 'museo';">Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Urna neque viverra justo nec ultrices dui. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Sed enim ut sem viverra aliquet eget sit amet tellus. Nunc sed velit dignissim sodales ut. Pellentesque habitant morbi tristique senectus et netus. Nisl nunc mi ipsum faucibus vitae. Pellentesque habitant morbi tristique senectus et. Egestas tellus rutrum tellus pellentesque eu. Fames ac turpis egestas maecenas pharetra convallis. Libero enim sed faucibus turpis. Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit. In cursus turpis massa tincidunt. Enim sit amet venenatis urna cursus eget nunc. Placerat in egestas erat imperdiet sed euismod nisi porta. Rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Nunc id cursus metus aliquam eleifend mi in.</p>
+            <div class="col-12 about-content">
+                <div class="card about-card w-75 mx-auto scroll-animate">
+                    <div class="card-body about-body scroll-animate">
+                      <p class="card-text" style="font-family: 'museo-sans';">Our inaugural Model UN Conference, DSUMUN Edition 1,
+                        harmonizes with our ideas, and extends a warm invitation to both
+                        seasoned delegates and newcomers alike. Against the backdrop of
+                        contemporary events, we are committed to addressing urgent
+                        issues across four dynamic committees—the UNSC, DISEC, Lok
+                        Sabha, and the WHO—with unwavering dedication and
+                        conscientiousness.</p>
+                      <p class="card-text" style="font-family: 'museo-sans';">MUN simulations engage thousands of students each year in
+                        developing public speaking, writing, and research skills while
+                        learning about the principles of the UN. In addition, they often act
+                        as the first entry point into international affairs and concepts—
+                        fostering empathy and understanding, championing human dignity
+                        and equality, promoting progress and prosperity, and upholding
+                        justice and accountability.</p>
                     </div>
                   </div>
             </div>
         </div>
+    </div>
+        <br>
+        <br>
+        <div class="container-md scroll-animate">
+            <img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
+        </div>
+        <br>
+        <br>
         <div class="container-fluid committee-container">
-            <div class="contianer-header">
-                <h1 style="font-weight: bolder; font-family: museo; color: white;">Our Committees</h1>
+            <div class="contianer-header scroll-animate">
+                <h1 style="font-weight: bolder; font-family: museo; color: white; margin-bottom: 60px; margin-top: 30px;">Our Committees</h1>
             </div>
             <div class="row committees-container">
                 <div class="col-12 col-md-3">
-                    <div class="card committee-card mb-3">
+                    <div class="card committee-card mb-3 scroll-animate">
                         <img src="{{ url_for('static', filename='img/dsumun/UNSC2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
                         <h1 class="card-title" style="font-size: 30px;">UNSC</h1>
                         <div class="card-body agenda-body">
@@ -82,7 +146,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3">
-                    <div class="card committee-card mb-3">
+                    <div class="card committee-card mb-3 scroll-animate">
                         <img src="{{ url_for('static', filename='img/dsumun/DISEC2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
                         <h1 class="card-title" style="font-size: 30px;">DISEC</h1>
                         <div class="card-body agenda-body">
@@ -93,9 +157,20 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3">
-                    <div class="card committee-card mb-3">
+                    <div class="card committee-card mb-3 scroll-animate">
                         <img src="{{ url_for('static', filename='img/dsumun/WHO2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
                         <h1 class="card-title" style="font-size: 30px;">WHO</h1>
+                        <div class="card-body agenda-body">
+                            <h1 class="card-text" style="font-size: 50px;">Agenda</h1>
+                            <p class="card-text">Patent Pooling for
+                                Medicines</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card committee-card mb-3 scroll-animate">
+                        <img src="{{ url_for('static', filename='img/dsumun/Lok Sabha2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
+                        <h1 class="card-title" style="font-size: 30px;">Lok Sabha</h1>
                         <div class="card-body agenda-body">
                             <h1 class="card-text" style="font-size: 50px;">Agenda</h1>
                             <p class="card-text"> Manipur Ethnic
@@ -103,22 +178,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-3">
-                    <div class="card committee-card mb-3">
-                        <img src="{{ url_for('static', filename='img/dsumun/Lok Sabha2.png') }}" class="card-img-top mx-auto" alt="UNSC" id="unsc">
-                        <h1 class="card-title" style="font-size: 30px;">Lok Sabha</h1>
-                        <div class="card-body agenda-body">
-                            <h1 class="card-text" style="font-size: 50px;">Agenda</h1>
-                            <p class="card-text"> Patent Pooling for
-                                Medicines</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <br>
         <br>
-    </div>
+        <div class="container-md scroll-animate">
+            <img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
+        </div>
+        <br>
+        <br>
+        <div class="row ">
+            <div class="col-12 col-md-12 mx-auto scroll-animate">
+                <h1 class="prizepool-one">PRIZEPOOL </h1>
+                <h1 class="prizepool-two">Rs.25,000+</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 scroll-animate reg-button">
+                <button class="btn btn-outline" id="reg-button">Register Here</button>
+            </div>
+            <div class="col-12 col-md-6 scroll-animate brochure-button">
+                <button class="btn btn-outline" id="br-button">Brochure</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container-md scroll-animate">
+            <img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-12 col-md-12 mx-auto">
+                <h1 class="queries">Contact</h1>
+                <ul class="list-group">
+                    <li class="list-group-item"><span style="padding-right: 10px;"><i class="bi bi-telephone-fill"></i></span>9620564990</li>
+                    <li class="list-group-item"><span style="padding-right: 10px;"><i class="bi bi-telephone-fill"></i></span>7022179550</li>
+                  </ul>
+            </div>
+        </div>
+        <br>
+        <br>
 </main>
 
 <footer class="footer">

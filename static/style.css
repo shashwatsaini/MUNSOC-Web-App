@@ -15,6 +15,9 @@
     .navbar-light .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); 
     }
+    #dsu-munsoc{
+        margin-left: 10px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -641,7 +644,6 @@ hr{
     background-image: url("img/dsumun/dsumunaboutbg.jpg");
     position: relative;
     z-index: 0;
-    overflow: hidden;
 }
 
 .about-container::before {
@@ -657,3 +659,258 @@ hr{
     filter: blur(8px); /* Adjust the blur intensity as needed */
     z-index: -1;
 }
+
+@media (max-width: 500px){
+    main{
+        text-align: center;
+    }
+    .reg-button{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .brochure-button{
+        text-align: center;
+    }
+    /* Center text within about container */
+    main {
+        text-align: center;
+    }
+
+    /* Resize and center images */
+    .committee-card img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Resize and center prize pool text */
+    .prizepool-one,
+    .prizepool-two {
+        text-align: center;
+        font-size: 70px;
+    }
+
+    /* Adjust column sizes for committees */
+    .committee-card {
+        margin-bottom: 20px;
+    }
+
+    /* Limit the width of the about container and center it */
+    .about-container {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 120%;
+
+    }
+    .about-card {
+        padding: 20px;
+    }
+    .about-body > p{
+        font-size: small;
+    }
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    main{
+        text-align: center;
+    }
+    .reg-button{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .brochure-button{
+        text-align: center;
+    }
+    /* Center text within about container */
+    main {
+        text-align: center;
+    }
+
+    /* Resize and center images */
+    .committee-card img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Resize and center prize pool text */
+    .prizepool-one,
+    .prizepool-two {
+        text-align: center;
+        font-size: 70px;
+    }
+
+    /* Adjust column sizes for committees */
+    .committee-card {
+        margin-bottom: 20px;
+    }
+
+    /* Limit the width of the about container and center it */
+    .about-container {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 300%;
+
+    }
+    .about-card {
+        padding: 20px;
+    }
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+@media (min-width: 750px) and (max-width: 1050px) {
+    main{
+        text-align: center;
+    }
+    .reg-button{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .brochure-button{
+        text-align: center;
+    }
+    /* Center text within about container */
+    main {
+        text-align: center;
+    }
+
+    /* Resize and center prize pool text */
+    .prizepool-one,
+    .prizepool-two {
+        text-align: center;
+        font-size: 70px;
+    }
+
+    /* Adjust column sizes for committees */
+    .committee-card {
+        margin-bottom: 20px;
+    }
+
+    /* Limit the width of the about container and center it */
+    .about-container {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 10%;
+
+    }
+    .about-card {
+        padding: 20px;
+    }
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .committees-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .committee-card {
+        flex-basis: calc(50% - 20px); /* Adjust margin as needed */
+        margin-bottom: 20px;
+    }
+
+    .committee-card img {
+        width: 100%; /* Ensures images fill their containers */
+        height: auto;
+    }
+
+}
+
+.home-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    background-position: center;
+    background-image: url("cope1_bg.jpg");
+    position: relative;
+    z-index: 0;
+}
+
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("cope1_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur intensity as needed */
+    z-index: -1;
+}
+
+.home-card{
+    margin-bottom: 50px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+  .home-card:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width:500px) {
+    .home-container {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 40%;
+
+    }
+    .home-card {
+        padding: 20px;
+    }
+    .home-body>p{
+        font-size: small;
+    }
+  }
+
+  @media (max-width:375px) {
+    .home-container {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 160%;
+
+    }
+    .home-card {
+        padding: 20px;
+    }
+  }
+
+  .dsu-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+
+.aboutus-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+

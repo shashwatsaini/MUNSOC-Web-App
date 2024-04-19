@@ -62,10 +62,10 @@
 
     	<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #00204A;">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="/" style="margin-left: 50px; padding: 5px">
+				<a class="navbar-brand" id="dsu-logo" href="/">
 					<img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height="50" width="50">
 				</a>
-				<a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">DSU MUNSOC</a>
+				<a class="navbar-brand" id="dsu-munsoc" href="#" style="font-family: 'museo'; color: white; font-size: 22px;">DSU MUNSOC</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -75,13 +75,13 @@
 							<a class="nav-link" href="/" id="navbar_text">Home </a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="/dsumun" id="navbar_text" style="text-align: left;">DSUMUN</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="/events" id="navbar_text" style="text-align: left;">Events </a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="/the-secretariat" id="navbar_text" style="text-align: left;">The Secretariat</a></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/dsumun" id="navbar_text" style="text-align: left;">DSUMUN</a>
 						</li>
 					</ul>
 					<span class="navbar-text d-none" style="font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
@@ -138,28 +138,7 @@
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
 
-				<div class="container-md my-5 scroll-animate cope">
-					<h2 class="display-5" style="padding-top: 0px;">COPE Edition I</h2>
-					<h3 class="display-7">The Conference of Public Exchange</h3>
-					<p>The Debate Competition</p>
-					<p>The COPE Edition I embodies our cherished ideals. Through
-					formal debate, our society provides an unimpeded avenue for diverse
-					ideologies, fostering a platform where opinions soar freely. Here, bias takes a backseat, and merit alone prevails. This inaugural event
-					welcomes participants across three committees, engaging in
-					discussions on highly politicized and pressing agendas.</p>
-				</div>
-
-				<div class="text-center my-5">
-					<a href="" class="btn options" style="background-color: #00204A; color: white; margin: 10px; width: auto;">Poster</a>
-					<a href="" class="btn options" style="background-color: #00204A; color: white; margin: 10px; width: auto;">Brochure</a>
-					<a href="/register" class="btn options" style="background-color: #00204A; color: white; margin: 10px; width: auto;">Register Here</a>
-				</div>
-
-				<div class="container-md scroll-animate">
-					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
-				</div>
-
-				<div class="container-md my-5 scroll-animate">
+				<div class="container-md my-5 scroll-animate homecarousel">
 					<h2 class="display-5" style="padding-top: 0px;">Our Gallery</h2>
 					<div class="col-12 col-md-7 mx-auto" id="container-md">
 						<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -203,33 +182,87 @@
 				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
-
-				  <div class="container-md my-5 scroll-animate cope">
-					<br>
-					<h3 class="display-7">About Us</h3>
-					<p>	Established in 2023, the Model United Nations Society at
-						Dayananda Sagar University is committed to raising awareness about
-						global events and influential personalities. Our mission centers on
-						cultivating indispensable skills—diplomacy, leadership, research, and
-						eloquence—crucial in navigating today's complex world.
-						<br><br>
-						In an era fraught with challenges, it is imperative to develop a
-						perspective that accommodates all parties. Attacks on free speech,
-						relics of a bygone era, must be consigned to history. As torchbearers
-						of the next generation, we bear the responsibility of safeguarding
-						principles bestowed upon us by democratic institutions, a free press,
-						and international cooperation.</p>
-				  </div>
+				<br>
+				<br>
+				<div class="container">
+					<div class="row home-container">
+						<div class="col-12 scroll-animate">
+							<h1 style="font-weight: bolder; font-family: museo-sans; color: white; font-size: 60px; padding-top: 60px;">COPE Edition I</h1>
+						</div>
+						<br>
+						<br>
+						<div class="col-12 col-md-12 home-content">
+							<div class="card home-card w-75 mx-auto scroll-animate">
+								<div class="card-body home-body scroll-animate">
+								  <p class="card-text" style="font-family: 'museo-sans';">The COPE Edition I embodies our cherished ideals. Through
+									formal debate, our society provides an unimpeded avenue for diverse
+									ideologies, fostering a platform where opinions soar freely. Here, bias takes a backseat, and merit alone prevails. This inaugural event
+									welcomes participants across three committees, engaging in
+									discussions on highly politicized and pressing agendas.</p>
+								</div>
+							  </div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<br>
+				<div class="container-md scroll-animate">
+					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
+				</div>
+				<br>
+				<br>
+				<div class="container">
+					<div class="row aboutus-container">
+						<div class="col-12 scroll-animate">
+							<h1 style="font-weight: bolder; font-family: museo-sans; color: black; font-size: 60px;">About Us</h1>
+						</div>
+						<br>
+						<br>
+						<div class="col-12 col-md-12 home-content">
+							<div class="card home-card w-75 mx-auto scroll-animate">
+								<div class="card-body home-body scroll-animate">
+								  <p class="card-text" style="font-family: 'museo-sans';">Established in 2023, the Model United Nations Society at
+									Dayananda Sagar University is committed to raising awareness about
+									global events and influential personalities. Our mission centers on
+									cultivating indispensable skills—diplomacy, leadership, research, and
+									eloquence—crucial in navigating today's complex world.</p>
+								</div>
+								<div class="card-body home-body scroll-animate">
+								  <p class="card-text" style="font-family: 'museo-sans';">
+									In an era fraught with challenges, it is imperative to develop a
+									perspective that accommodates all parties. Attacks on free speech,
+									relics of a bygone era, must be consigned to history. As torchbearers
+									of the next generation, we bear the responsibility of safeguarding
+									principles bestowed upon us by democratic institutions, a free press,
+									and international cooperation.</p>
+								</div>
+							  </div>
+						</div>
+					</div>
+				</div>
 
 				<div class="container-md scroll-animate">
 					<img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
 				</div>
-
-				  <div class="container-md my-5 scroll-animate cope">
-					<br>
-					<h3 class="display-7">About Dayananda Sagar University</h3>
-					<p>In the six decades since the establishment of Dayananda Sagar Institutions in 1960, the group has grown into one of India’s leading educational institutions today. This growth is the result of the institutions focused effort to advance knowledge and educate students in all disciplines, from medicine to engineering, and law to commerce. The pursuit of excellence, fairness, leadership, and integrity & transparency are values that drive our institutions.</p>
-				  </div>
+				<br>
+				<br>
+				<br>
+				<div class="container">
+					<div class="row dsu-container">
+						<div class="col-12 scroll-animate">
+							<h1 style="font-weight: bolder; font-family: museo-sans; color: black; font-size: 60px;">About Dayananda Sagar University</h1>
+						</div>
+						<br>
+						<br>
+						<div class="col-12 col-md-12 home-content">
+							<div class="card home-card w-75 mx-auto scroll-animate">
+								<div class="card-body home-body scroll-animate">
+								  <p class="card-text" style="font-family: 'museo-sans';">In the six decades since the establishment of Dayananda Sagar Institutions in 1960, the group has grown into one of India’s leading educational institutions today. This growth is the result of the institutions focused effort to advance knowledge and educate students in all disciplines, from medicine to engineering, and law to commerce. The pursuit of excellence, fairness, leadership, and integrity & transparency are values that drive our institutions.</p>
+								</div>
+							  </div>
+						</div>
+					</div>
+				</div>
 
 				<br><br><br>
 

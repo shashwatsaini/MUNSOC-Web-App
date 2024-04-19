@@ -48,26 +48,26 @@
 	<body>
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #00204A;">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="/" style="margin-left: 50px; padding: 5px"><img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height= "50" width="50"></a>
-
-				<a class="navbar-brand" href="#" style="font-family: 'museo'; color: white; font-size: 22px; padding: 5px;">DSU MUNSOC</a>
-
+				<a class="navbar-brand" id="dsu-logo" href="/">
+					<img src="{{ url_for('static', filename='logo_white_notext.svg') }}" height="50" width="50">
+				</a>
+				<a class="navbar-brand" id="dsu-munsoc" href="#" style="font-family: 'museo'; color: white; font-size: 22px;">DSU MUNSOC</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse text-left" id="navbarText">
+				<div class="collapse navbar-collapse" id="navbarText">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item" style="text-align: left;">
 							<a class="nav-link" href="/" id="navbar_text">Home </a>
 						</li>
-						<li class="nav-item" style="text-align: left;">
-							<a class="nav-link" href="/events" id="navbar_text">Events </a>
-						</li>
-						<li class="nav-item" style="text-align: left;">
-							<a class="nav-link" href="/the-secretariat" id="navbar_text">The Secretariat</a></a>
-						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="/dsumun" id="navbar_text" style="text-align: left;">DSUMUN</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/events" id="navbar_text" style="text-align: left;">Events </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/the-secretariat" id="navbar_text" style="text-align: left;">The Secretariat</a></a>
 						</li>
 					</ul>
 					<span class="navbar-text d-none" style="font-family: 'museo'; color: white; padding: 2px; font-size: 22px;">
@@ -99,7 +99,7 @@
 			<br>
 
 			<div class="container-md d-flex justify-content-center scroll-animate scroll-animate">
-			    <div class="col-12 col-md-12 col-md-7 mx-auto">
+			    <div class="col-12 col-md-7 mx-auto">
 					<div class="card-title">
 						COPE Edition I: The Conference of Public Exchange
 					</div>
@@ -253,45 +253,6 @@
 			</div>
 
 			<br>
-
-			<div class="container-md d-flex justify-content-center scroll-animate">
-			    <div class="col-12 col-md-7 mx-auto">
-					<div class="card-title">
-						Our inaugural event and seminar on 'Dive Into Diplomacy' at Dayananda Sagar University
-					</div>
-			        <div class="card">
-			            <div class="card-body">
-			                <div id="carouselExampleControls4" class="carousel slide" data-bs-ride="carousel">
-			                    <div class="carousel-inner">
-			                        <div class="carousel-item active">
-			                            <img class="d-block w-100" src="{{ url_for('static', filename='img/COPE1/COPE1pic1.jpg') }}" alt="First slide">
-			                        </div>
-			                        <div class="carousel-item">
-			                            <img class="d-block w-100" src="{{ url_for('static', filename='img/COPE1/COPE1pic2.jpg') }}" alt="Second slide">
-			                        </div>
-			                        <div class="carousel-item">
-			                            <img class="d-block w-100" src="{{ url_for('static', filename='img/COPE1/COPE1pic3.jpg') }}" alt="Second slide">
-			                        </div>
-									<div class="carousel-item">
-			                            <img class="d-block w-100" src="{{ url_for('static', filename='img/COPE1/COPE1pic4.jpg') }}" alt="Second slide">
-			                        </div>
-									<div class="carousel-item">
-			                            <img class="d-block w-100" src="{{ url_for('static', filename='img/COPE1/COPE1pic5.jpg') }}" alt="Second slide">
-			                        </div>
-			                    </div>
-			                    <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-bs-slide="prev">
-			                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			                        <span class="sr-only">Previous</span>
-			                    </a>
-			                    <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-bs-slide="next">
-			                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			                        <span class="sr-only">Next</span>
-			                    </a>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
-			</div>
 
 			<br>
 		</main>

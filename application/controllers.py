@@ -30,9 +30,9 @@ def secretariat():
 	return render_template('secretariat.html')
 
 @app.route('/dsumun')
-def DSUMUN():
+def dsumun():
 	app.logger.info(f'[{datetime.now()}] GET: dsumun.html')
-	return render_template('DSUMUN.html')
+	return render_template('dsumun.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

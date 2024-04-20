@@ -893,6 +893,9 @@ hr{
         text-align:center;
         margin-left: 5px ;
     }
+    .dsu-container{
+        margin-left: 5px;
+    }
   }
 
   @media (max-width:375px) {

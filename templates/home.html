@@ -9,7 +9,6 @@
 		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 		<!--Icon Library-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script>
 		document.addEventListener("DOMContentLoaded", function() {
@@ -105,8 +104,8 @@
     			<div class="banner">
 					<div class="blur-overlay">
         			<div class="row">
-            			<div class="col-12 col-md-12 d-flex flex-column justify-content-center align-items-center banner-content">
-                			<div class="header_banner" style="font-weight: bolder;">
+            			<div class="col-12 col-md-12 d-flex flex-column justify-content-center align-items-center">
+                			<div class="header_banner">
                     			<h1>DSUMUN</h1>
                 			</div>
                 			<div class="text_banner">
@@ -121,16 +120,13 @@
                 			</div>
             			</div>
 					</div>
-					<div class="regsoon" style="margin: 1%; text-align: center; font-family: 'museo-sans'; font-weight: bold; color: white;">
-						<h1>Registration Opens Soon</h1>
-					</div>
 					<div class="row">
             			<div class="col-12 col-md-12 d-flex justify-content-center">
-                			<!--<div class="registration" style="margin: 1%;">
-                    			<a class="btn btn-outline" type="button" style="padding: 20px;">Register</a>
-                			</div>-->
+                			<div class="registration" style="margin: 1%;">
+                    			<a class="btn btn-outline" href="https://forms.gle/fPb9z5khYihfgHdt9" type="button" style="padding: 20px;">Register</a>
+                			</div>
                 			<div class="brochure" style="margin: 1%; padding-bottom: 30px;">
-                    			<a class="btn btn-outline" type="button" style="padding: 20px;" href="https://drive.google.com/file/d/1GoDWElQJBUS9YHKEgKUlat3ipBlED720/view?usp=sharing">Brochure</a>
+                    			<a class="btn btn-outline" href="https://drive.google.com/file/d/1GoDWElQJBUS9YHKEgKUlat3ipBlED720/view" type="button" style="padding: 20px;">Brochure</a>
                 			</div>
             			</div>
         			</div>
@@ -197,9 +193,6 @@
 						<br>
 						<div class="col-12 col-md-12 home-content">
 							<div class="card home-card w-75 mx-auto scroll-animate">
-								<div class="card-body home-body scroll-animate">
-									<p class="card-text" style="font-family: 'museo-sans'; font-weight: bolder;">22nd - 23rd March 2024</p>
-								  </div>
 								<div class="card-body home-body scroll-animate">
 								  <p class="card-text" style="font-family: 'museo-sans';">The COPE Edition I embodies our cherished ideals. Through
 									formal debate, our society provides an unimpeded avenue for diverse
@@ -275,21 +268,14 @@
 
 			</main>
 
-			<footer>
+			<div class="footer">
 				<div class="display-8">© 2024 Copyright: DSU Model United Nations Society</div>
 				<div class="display-8">"There is nothing stronger than those two: Patience & Time"</div>
-				<a href="https://www.linkedin.com/company/dsu-model-united-nations-society">
-					<i class="fa fa-linkedin fa-lg" style="padding-right: 10px;"></i>
-				</a>
-				<a href="https://www.instagram.com/dsu_munsoc/?igshid=MWwydW53a28yeTIyYw%3D%3D">
-					<i class="fa fa-instagram fa-lg"></i>
-				</a>
+				<a href="https://in.linkedin.com/company/dsu-model-united-nations-society"><i class="fa fa-linkedin fa-lg" style="padding-right: 10px;"></i></a>
+				<a href="https://www.instagram.com/dsu_munsoc/?igsh=MWwydW53a28yeTIyYw%3D%3D"><i class="fa fa-instagram fa-lg"></i></a>
 				<br>
 				<img src="{{ url_for('static', filename='logo_white.png') }}" width="5%" height="5%">
-			</footer>
-			
-						
-
+			</div>
 
 		</div>
 
@@ -312,6 +298,5 @@
 		        }, 1000);
 		    });
 		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/js/font-awesome.min.js"></script>
 	</body>
 </html>

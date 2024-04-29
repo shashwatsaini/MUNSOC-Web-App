@@ -121,7 +121,7 @@ div {
     margin: 0 auto; 
 }
 
-footer {
+.footer {
 	font-family: 'museo';
 	color: white;
 	background-color: #00204A;
@@ -130,7 +130,6 @@ footer {
 	padding: 20px;
     position: relative;
     bottom: 0;
-    z-index: -1;
 }
 
 
@@ -340,9 +339,9 @@ footer {
 }
 
 .header_banner{
-    margin-top: 80px;
+    margin-top: 40px;
     text-align: center;
-    font-family: 'museo-sans';
+    font-family: 'museo';
     font-weight: bolder;
 }
 
@@ -416,7 +415,7 @@ hr{
     }
 
     .header_banner h1 {
-        font-size: 40px; /* Adjust font size as needed */
+        font-size: 80px; /* Adjust font size as needed */
         margin-top: 30px;
     }
 
@@ -431,10 +430,15 @@ hr{
         font-size: 40px; /* Adjust font size as needed */
     }
 
-    .registration a,
-    .brochure a {
-        display: block;
+    .registration>a{
+        display: inline;
+        margin-top: 10px;
+        margin-left: 65px;
+    }
+    .brochure>a {
+        display: inline;
         margin-top: 10px; /* Adjust margin as needed */
+        margin-right: 25px;
     }
     .footer {
 	    font-family: 'museo';
@@ -444,7 +448,6 @@ hr{
 	    width: 100%;
 	    padding: 20px;
         position: relative;
-        z-index: -1;
     }
 }
 
@@ -661,6 +664,10 @@ hr{
 }
 
 @media (max-width: 500px){
+    .brochure{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     main{
         text-align: center;
     }
@@ -670,6 +677,10 @@ hr{
     }
     .brochure-button{
         text-align: center;
+    }
+    .header_banner{
+        font-size: 80px;
+        margin-top: 20px;
     }
     /* Center text within about container */
     main {

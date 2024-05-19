@@ -326,11 +326,10 @@ div {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(8px); /* Adjust the blur intensity as needed */
+    backdrop-filter: blur(8px);
     background-color: rgba(129, 109, 237, 0.5);
     z-index: -1;
 }
-
 
 .image_banner {
     flex: 0 0 auto;
@@ -892,6 +891,13 @@ hr{
     .home-body>p{
         font-size: small;
     }
+    #munbody{
+        overflow-x: hidden;
+    }
+    .about-us,
+    .about-dsu {
+        text-align: center;
+    }
   }
 
   @media (max-width:375px) {
@@ -924,4 +930,137 @@ hr{
     position: relative;
     z-index: 0;
 }
+
+#background-guide{
+    background-color: #FFD700;
+    font-size: 20px;
+}
+
+.itinerary-container {
+    padding: 0 15px;
+}
+
+.itinerary-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itinerary-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.itinerary-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.itinerary-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.itinerary-sub-header {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.table-cell {
+    font-size: 30px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'museo';
+}
+
+.table-cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.itinerary-header{
+    background-color: #00204A;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .itinerary-sub-header {
+        font-size: 50px;
+    }
+
+    .table-cell {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .itinerary-column {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .itinerary-sub-header {
+        font-size: 40px;
+    }
+
+    .table-cell {
+        font-size: 25px;
+        font-family: 'museo';
+    }
+
+    .itinerary-row {
+        flex-wrap: wrap;
+    }
+
+    .itinerary-column {
+        padding: 5px;
+    }
+
+    .day-one-table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .itinerary-column {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+
+    .col-md-6:nth-child(odd) .table-cell {
+        padding: 7.2px;
+        font-size: 17px;
+    }
+
+    .col-md-6:nth-child(even) .table-cell {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .table-cell{
+        padding: 10px;
+        font-size: 18px;
+    }
+
+}
+
+
+
+
+
 

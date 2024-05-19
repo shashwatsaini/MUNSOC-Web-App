@@ -61,7 +61,7 @@
 		</script>
 
 </head>
-<body>
+<body id="munbody">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #00204A;">
         <div class="container-fluid">
             <a class="navbar-brand" id="dsu-logo" href="/">
@@ -132,6 +132,86 @@
     </div>
     <br>
     <br>
+    <div class="container itinerary-container">
+        <div class="row itinerary-row">
+            <div class="col-12 itinerary-header scroll-animate">
+                <h1 style="font-family: museo-sans; font-size: 70px;">Itinerary</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row itinerary-row">
+            <div class="col-6 itinerary-column">
+                <h1 class="itinerary-sub-header scroll-animate" style="font-family: museo;">DAY 1</h1>
+            </div>
+            <div class="col-6 itinerary-column">
+                <h1 class="itinerary-sub-header scroll-animate" style="font-family: museo;">24th May</h1>
+            </div>
+        </div>
+        <div class="row itinerary-row">
+            <div class="col-md-6 col-12 itinerary-column">
+                <table class="table day-one-table-time scroll-animate">
+                    <tbody>
+                        <tr><td class="table-cell">8:30 A.M. to 9:30 A.M.</td></tr>
+                        <tr><td class="table-cell">9:30 A.M. to 10:30 A.M.</td></tr>
+                        <tr><td class="table-cell">10:30 A.M. to 12:30 P.M.</td></tr>
+                        <tr><td class="table-cell">12:30 P.M. to 2:00 P.M.</td></tr>
+                        <tr><td class="table-cell">2:00 P.M. to 4:00 P.M.</td></tr>
+                        <tr><td class="table-cell">4:00 P.M. to 4:30 P.M.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6 col-12 itinerary-column">
+                <table class="table day-one-table scroll-animate">
+                    <tbody>
+                        <tr><td class="table-cell">Registrations</td></tr>
+                        <tr><td class="table-cell">Introductory Ceremony</td></tr>
+                        <tr><td class="table-cell">First Session</td></tr>
+                        <tr><td class="table-cell">Lunch</td></tr>
+                        <tr><td class="table-cell">Second Session</td></tr>
+                        <tr><td class="table-cell">High Tea</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row itinerary-row">
+            <div class="col-6 itinerary-column">
+                <h1 class="itinerary-sub-header scroll-animate" style="font-family: museo;">DAY 2</h1>
+            </div>
+            <div class="col-6 itinerary-column">
+                <h1 class="itinerary-sub-header scroll-animate" style="font-family: museo;">25th May</h1>
+            </div>
+        </div>
+        <div class="row itinerary-row">
+            <div class="col-md-6 col-12 itinerary-column ">
+                <table class="table day-one-table scroll-animate">
+                    <tbody>
+                        <tr><td class="table-cell">9:00 A.M. to 12:30 P.M.</td></tr>
+                        <tr><td class="table-cell">12:30 P.M. to 2:00 P.M.</td></tr>
+                        <tr><td class="table-cell">2:00 P.M. to 3:15 P.M.</td></tr>
+                        <tr><td class="table-cell">3:15 P.M. to 4:30 P.M.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6 col-12 itinerary-column">
+                <table class="table day-one-table scroll-animate">
+                    <tbody>
+                        <tr><td class="table-cell">Third Session</td></tr>
+                        <tr><td class="table-cell">Lunch</td></tr>
+                        <tr><td class="table-cell">Fourth Session</td></tr>
+                        <tr><td class="table-cell">Closing Ceremony</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-md scroll-animate">
+        <img src="{{ url_for('static', filename='separator2.png') }}" width=50px height=50px>
+    </div>
+    <br>
+    <br>
     <div class="container-fluid committee-container">
         <div class="contianer-header scroll-animate">
             <h1 style="font-weight: bolder; font-family: museo; color: white; margin-bottom: 60px; margin-top: 30px;">Our Committees</h1>
@@ -179,6 +259,9 @@
                             Violence</p>
                     </div>
                 </div>
+            </div>
+            <div style="padding: 30px;">
+                <button class="btn btn-background" id="background-guide" style="font-family: museo-sans; color: white;">Background Guides</button>
             </div>
         </div>
     </div>
@@ -231,5 +314,6 @@
     <br>
     <img src="{{ url_for('static', filename='logo_white.png') }}" width="5%" height="5%">
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

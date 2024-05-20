@@ -1007,11 +1007,6 @@ hr{
 }
 
 @media (max-width: 576px) {
-    .itinerary-column {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
     .itinerary-sub-header {
         font-size: 40px;
     }
@@ -1032,15 +1027,24 @@ hr{
     .day-one-table {
         width: 100%;
     }
-}
-
-@media (max-width: 576px) {
 
     .itinerary-column {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
+    .col-12 .table-cell {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+/* Ensure specific padding and font-size for smaller screens */
+@media (max-width: 576px) {
+    .itinerary-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
     .col-md-6:nth-child(odd) .table-cell {
         padding: 7.2px;
@@ -1052,12 +1056,12 @@ hr{
         font-size: 20px;
     }
 
-    .table-cell{
+    .table-cell {
         padding: 10px;
         font-size: 18px;
     }
-
 }
+
 
 
 
